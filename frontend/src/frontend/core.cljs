@@ -6,20 +6,42 @@
 
 
 (defn app []
-  (let [card @(rf/subscribe [:card])]
+  (let [card @(rf/subscribe [:card])
+        answer @(rf/subscribe [:answer])
+        hide-answer @(rf/subscribe [:hide-answer])]
   [:div
   [:button {
-    :disabled @(rf/subscribe [:can-inc -1])
+    :disabled @(rf/subscribe [:cant-inc -1])
     :on-click #(rf/dispatch [:inc-card -1])}
     "Back"]
   [:button
-   {:disabled @(rf/subscribe [:can-inc 1])
+   {:disabled
+      (or (nil? answer) @(rf/subscribe [:cant-inc 1]))
     :on-click #(rf/dispatch [:inc-card 1])} "Next"]
+  [:div
+    [:button
+      {:on-click #(rf/dispatch [:set-answer false])
+       :style
+        {:background (if (false? answer) "lightBlue")}}
+        "Wrong"]
+    [:button
+      {:on-click #(rf/dispatch [:set-answer true])
+       :style
+        {:background (if (true? answer) "lightBlue")}}
+        "Right"]]
+    [:div
+      [:button
+        {:on-click
+          #(rf/dispatch [:hide-answer (not hide-answer)])}
+      "Show"
+      ]
+    ]
+
     [:div (:id card)]
     [:div (:question card)]
     [:div
       {:style
-       {:display "inline-block"
+       {:display (if hide-answer "none" "inline-block")
         :white-space "pre"}
        :rows 30
        :cols 300}

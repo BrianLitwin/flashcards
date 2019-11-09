@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 'card',
+'django_extensions',
 'rest_framework',
 'corsheaders',
     'django.contrib.admin',
