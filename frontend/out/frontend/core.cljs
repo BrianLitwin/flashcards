@@ -25,23 +25,36 @@
   [sidebar-item "session" :session]
   ])
 
+(defn back-next []
+  (let [btn-style {:margin 40 :width 80 :height 30}]
+  [:div {:style {
+      :background "blue"
+      :height "50px"
+      :display "flex"
+      :align-items "center"
+      :justify-content "center"
+    }}
+    [:button
+    { :disabled @(rf/subscribe [:cant-inc -1])
+      :on-click #(rf/dispatch [:inc-card -1])
+      :style btn-style}
+      "Back"]
+    [:button
+     {:style btn-style
+      :disabled
+        (or (nil? @(rf/subscribe [:answer])) @(rf/subscribe [:cant-inc 1]))
+      :on-click #(rf/dispatch [:inc-card 1])} "Next"]]))
+
 (defn session []
   (let [card @(rf/subscribe [:card])
         answer @(rf/subscribe [:answer])
         hide-answer @(rf/subscribe [:hide-answer])
         progress @(rf/subscribe [:session-stats])
         sesh @(rf/subscribe [:answered-correctly])]
-  [:div {:style {:background "green"}}
+  [:div {:style {:background "lightBlue" :flexGrow 1 :display "flex" :flexDirection "column"}}
   [:p (str (:correct sesh) " / " (:total sesh))]
   [:p (str (:index progress) " / " (:total progress))]
-  [:button {
-    :disabled @(rf/subscribe [:cant-inc -1])
-    :on-click #(rf/dispatch [:inc-card -1])}
-    "Back"]
-  [:button
-   {:disabled
-      (or (nil? answer) @(rf/subscribe [:cant-inc 1]))
-    :on-click #(rf/dispatch [:inc-card 1])} "Next"]
+  [back-next]
   [:div
     [:button
       {:on-click #(rf/dispatch [:set-answer false])
@@ -73,18 +86,32 @@
 
 (defn home [] [:div "home"])
 
+(defn group-info [{:keys [name id]}]
+  (let [new-name @(rf/subscribe [:change-group-name id])]
+  [:div {
+    :style {:height "35px" :paddingLeft "25px"}}
+    name
+        [:div {:style {:paddingLeft "25px" :display "inline"}}
+        "Rename"]
+        [:input
+          {:value new-name
+           :on-change #(rf/dispatch [:change-group-name (-> % .-target .-value) id])
+          }]
+        [:button
+          {:on-click #(rf/dispatch [:save-group-name new-name id])}
+        "save"]]))
+
 (defn groups []
   (let [groups @(rf/subscribe [:groups])
         text @(rf/subscribe [:new-group-input])]
   [:div
+      [:h5 "New Group"]
       [:input
         { :value text
           :type "text"
           :on-change #(rf/dispatch [:new-group-input (-> % .-target .-value)])}]
        [:button {:on-click #(rf/dispatch [:new-group text])} "Save"]
-
-    (doall (for [group groups]
-      [:ul {:key (:id group)} (:name group)]))]))
+    (doall (for [group groups] ^{:key (:id group)} [group-info group]))]))
 
 (def views
   {:session session :home home :groups groups}

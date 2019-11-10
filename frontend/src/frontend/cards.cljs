@@ -15,6 +15,7 @@
   :view :home
   :groups []
   :new-group-input ""
+  :new-group-names {}
 })
 
 (doall
@@ -85,6 +86,22 @@
      :dispatch [:post-answer answer]})))
 
 (rf/reg-event-db
+ :change-group-name
+ (fn [db [_ name id]]
+   (let [key (keyword (str id))
+         names (:new-group-names db)
+         new-names (assoc names key name)]
+    (assoc db :new-group-names new-names))))
+
+(rf/reg-sub
+ :change-group-name
+ (fn [db [_ id]]
+   (let [key (keyword (str id))
+         names (:new-group-names db)
+         new? (contains? key names)]
+    (if new? "" (key names)))))
+
+(rf/reg-event-db
   :success-fetch-cards
   (fn [db [_ response]]
     (assoc db
@@ -107,6 +124,27 @@
  :success-new-group
  (fn [db [_ response]]
    (assoc db :groups (conj (:groups db) response))))
+
+(rf/reg-event-fx
+ :success-save-group-name
+ (fn [{:keys [db]} [_ {:keys [id] :as group}]]
+   (.log js/console group)
+   { :dispatch-n [
+      [:groups (map (fn [item] (if (= (:id item) id) group item)) (:groups db))]
+      [:change-group-name "" id]]}))
+
+
+
+(rf/reg-event-fx
+ :save-group-name
+ (fn [db [_ name id]]
+   {:http-xhrio
+    {:method           :patch
+     :uri              (str "http://localhost:8001/api/group/" id "/")
+     :params           {:name name :id id}
+     :format           (ajax/json-request-format)
+     :response-format  (ajax/json-response-format {:keywords? true})
+     :on-success       [:success-save-group-name]}}))
 
  (rf/reg-event-fx
   :new-group
