@@ -11,7 +11,11 @@
  {:cards []
   :answers []
   :card-index 0
-  :hide-answer true})
+  :hide-answer true
+  :view :home
+  :groups []
+  :new-group-input ""
+})
 
 (doall
   (map make (keys init-state)))
@@ -56,6 +60,21 @@
  :<- [:card-index]
  (fn [[answers i]] (get answers i)))
 
+(rf/reg-sub
+ :answered-correctly
+ :<- [:answers]
+ (fn [answers]
+   (let [answered (filter #(not (nil? %)) answers)
+         correct (filter true? answered)]
+    {:correct (count correct) :total (count answered)})))
+
+(rf/reg-sub
+ :session-stats
+ :<- [:cards]
+ :<- [:card-index]
+ (fn [[cards i]]
+   {:index i :total (count cards)}))
+
 (rf/reg-event-fx
  :set-answer
  (fn [{:keys [db] :as db} [_ answer]]
@@ -76,6 +95,55 @@
  :success-post-answer
  (fn [db] db))
 
+(rf/reg-event-db
+ :success-add-group
+ (fn [db] db))
+
+(rf/reg-event-db
+ :success-fetch-groups
+ (fn [db [_ response]] (assoc db :groups response)))
+
+(rf/reg-event-db
+ :success-new-group
+ (fn [db [_ response]]
+   (assoc db :groups (conj (:groups db) response))))
+
+ (rf/reg-event-fx
+  :new-group
+  (fn [{:keys [db]} [_ name]]
+   {:db (assoc db :new-group-input "")
+    :http-xhrio
+     {:method           :post
+      :uri              "http://localhost:8001/api/group/"
+      :params           {:name name}
+      :format           (ajax/json-request-format)
+      :response-format  (ajax/json-response-format {:keywords? true})
+      :on-success       [:success-new-group]}}))
+
+(rf/reg-event-fx
+ :fetch-groups
+ (fn []
+   {:http-xhrio
+    {:method           :get
+     :uri              "http://localhost:8001/api/group/"
+     :params           {}
+     :format           (ajax/json-request-format)
+     :response-format  (ajax/json-response-format {:keywords? true})
+     :on-success       [:success-fetch-groups]}}))
+
+
+(rf/reg-event-fx
+ :add-group
+ (fn [_ [_ card group]]
+   {:http-xhrio
+    {:method           :post
+     :uri              (str "http://localhost:8001/api/card/" card "/add_group/")
+     :params           {:group group}
+     :format           (ajax/json-request-format)
+     :response-format  (ajax/json-response-format {:keywords? true})
+     :on-success       [:success-add-group]}}))
+
+
 (rf/reg-event-fx
   :post-answer
   (fn [_ [_ answer]]
@@ -93,11 +161,8 @@
  (fn []
    {:http-xhrio
     {:method           :get
-     :uri              "http://localhost:8001/api/cards/"
+     :uri              "http://localhost:8001/api/card/"
      :params           {}
      :format           (ajax/json-request-format)
      :response-format  (ajax/json-response-format {:keywords? true})
      :on-success       [:success-fetch-cards]}}))
-
-(rf/dispatch [:init])
-(rf/dispatch [:fetch-cards])

@@ -6,13 +6,14 @@ from django.utils import timezone
 
 class Group(models.Model):
     name = models.CharField(max_length=256)
+    url = models.CharField(max_length=500, null=True)
 
 class Card(models.Model):
     question = models.TextField()
     answer = models.TextField()
-    url = models.CharField(max_length=256)
+    url = models.CharField(max_length=256, null=True)
     page_offset = models.IntegerField()
-    groups = models.ManyToManyField(Group)
+    groups = models.ManyToManyField(Group, blank=True)
 
 class CardAnswer(models.Model):
     card = models.ForeignKey(Card, on_delete=models.CASCADE)

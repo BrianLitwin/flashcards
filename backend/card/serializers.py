@@ -1,5 +1,10 @@
 from rest_framework.serializers import ModelSerializer
-from .models import CardAnswer, Card
+from .models import Group, CardAnswer, Card
+
+class GroupSerializer(ModelSerializer):
+    class Meta:
+        model = Group
+        fields = '__all__'
 
 class CardSerializer(ModelSerializer):
     class Meta:
