@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from  django.utils import timezone
 
 class CardViewSet(ModelViewSet):
-    authentication_classes = [] # let any requests in for deving 
+    authentication_classes = [] # let any requests in for deving
     permission_classes = (permissions.AllowAny,)
     queryset = Card.objects.all()
     serializer_class = CardSerializer
@@ -40,12 +40,6 @@ class GroupViewSet(ModelViewSet):
     permission_classes = (permissions.AllowAny,)
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-
-    def update(self, request, pk=None):
-        group = Group.objects.get(pk=pk)
-        group.name = request.data.get('name')
-        group.save()
-        return Response(200)
 
 class CardAnswerViewset(ModelViewSet):
     permission_classes = (permissions.AllowAny,)

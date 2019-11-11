@@ -15,6 +15,9 @@ class Card(models.Model):
     page_offset = models.IntegerField()
     groups = models.ManyToManyField(Group, blank=True)
 
+    def __str__(self):
+        return self.question
+
 class CardAnswer(models.Model):
     card = models.ForeignKey(Card, on_delete=models.CASCADE)
     date = models.DateTimeField(default=timezone.now)
