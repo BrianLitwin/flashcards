@@ -19573,3 +19573,104 @@ notifying browser that file changed:  out/frontend/core.js
 [0mCompiling "main.js" from ["src"]...[0m
 [32mSuccessfully compiled "main.js" in 0.473 seconds.[0m
 notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[31mFailed to compile "main.js" in 0.353 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:93 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 93, col 48] The map literal starting with :on-click on line 92 column 3 contains 3 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m91[0m  [36m[:div[0m
+  [36m92[0m  [36m{:on-click[0m
+  [33m93[0m  [1m :style {:height "35px" :paddingLeft "25px"}}[0m
+  [0m  [0m  [33m /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 93, col 48] The map literal starting with :on-click on line 92 column 3 contains 3 form(s). Map literals must contain an even number of forms.[0m
+  [36m94[0m  [36m  name[0m
+  [36m95[0m  [36m      [:div {:style {:paddingLeft "25px" :display "inline"}}[0m
+  [36m96[0m  [36m      "Rename"][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+[0mCompiling "main.js" from ["src"]...[0m
+[31mFailed to compile "main.js" in 0.285 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:93 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 93, col 48] The map literal starting with :on-click on line 92 column 3 contains 3 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m91[0m  [36m[:div[0m
+  [36m92[0m  [36m{:on-click[0m
+  [33m93[0m  [1m :style {:height "35px" :paddingLeft "25px"}}[0m
+  [0m  [0m  [33m /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 93, col 48] The map literal starting with :on-click on line 92 column 3 contains 3 form(s). Map literals must contain an even number of forms.[0m
+  [36m94[0m  [36m  name[0m
+  [36m95[0m  [36m      [:div {:style {:paddingLeft "25px" :display "inline"}}[0m
+  [36m96[0m  [36m      "Rename"][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+[0mCompiling "main.js" from ["src"]...[0m
+[31mFailed to compile "main.js" in 0.286 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:93 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 93, col 48] The map literal starting with :on-click on line 92 column 3 contains 3 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m91[0m  [36m[:div[0m
+  [36m92[0m  [36m{:on-click[0m
+  [33m93[0m  [1m :style {:height "35px" :paddingLeft "25px"}}[0m
+  [0m  [0m  [33m /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 93, col 48] The map literal starting with :on-click on line 92 column 3 contains 3 form(s). Map literals must contain an even number of forms.[0m
+  [36m94[0m  [36m  name[0m
+  [36m95[0m  [36m      [:div {:style {:paddingLeft "25px" :display "inline"}}[0m
+  [36m96[0m  [36m      "Rename"][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+[0mCompiling "main.js" from ["src"]...[0m
+[31mFailed to compile "main.js" in 0.314 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:93 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 93, col 48] The map literal starting with :on-click on line 92 column 3 contains 3 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m91[0m  [36m[:div[0m
+  [36m92[0m  [36m{:on-click [0m
+  [33m93[0m  [1m :style {:height "35px" :paddingLeft "25px"}}[0m
+  [0m  [0m  [33m /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 93, col 48] The map literal starting with :on-click on line 92 column 3 contains 3 form(s). Map literals must contain an even number of forms.[0m
+  [36m94[0m  [36m  name[0m
+  [36m95[0m  [36m      [:div {:style {:paddingLeft "25px" :display "inline"}}[0m
+  [36m96[0m  [36m      "Rename"][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 1.243 seconds.[0m
+notifying browser that file changed:  out/goog/deps.js
+notifying browser that file changed:  out/cljs_deps.js
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.343 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.455 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.569 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.545 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.494 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.453 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.447 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.427 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.505 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.639 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.483 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.389 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js

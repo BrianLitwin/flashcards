@@ -86,10 +86,11 @@
 
 (defn home [] [:div "home"])
 
-(defn group-info [{:keys [name id]}]
+(defn group-info [{:keys [name id url]}]
   (let [new-name @(rf/subscribe [:change-group-name id])]
-  [:div {
-    :style {:height "35px" :paddingLeft "25px"}}
+  [:div
+  {:on-click #(.open js/window url)
+   :style {:height "35px" :paddingLeft "25px" :cursor "pointer"}}
     name
         [:div {:style {:paddingLeft "25px" :display "inline"}}
         "Rename"]
@@ -130,3 +131,4 @@
   (r/render [app] (js/document.getElementById "app")))
 
 (mount-root)
+(.log js/console "seen")
