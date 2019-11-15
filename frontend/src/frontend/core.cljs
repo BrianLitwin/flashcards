@@ -1,9 +1,17 @@
 (ns frontend.core
-  (:require [reagent.core :as r]
-            [frontend.cards]
-            [frontend.router]
-            [re-frame.core :as rf]
-            [day8.re-frame.http-fx]))
+    (:require [reagent.core :as r]
+              [frontend.cards]
+              [frontend.router]
+              [re-frame.core :as rf]
+              [day8.re-frame.http-fx]))
+
+(enable-console-print!)
+
+(println "This text is printed from src/frontend/core.cljs. Go ahead and edit it and see reloading in action.")
+
+;; define your app data so that it doesn't get over-written on reload
+
+(defonce app-state (atom {:text "Hello world!"}))
 
 (defn sidebar-item [text view]
   (let [cur-view @(rf/subscribe [:view])]
@@ -160,6 +168,7 @@
   [sidebar]
   [(views view)]]))
 
+
 (defn mount-root []
   (rf/dispatch-sync [:init])
   (rf/dispatch [:fetch-cards])
@@ -167,3 +176,9 @@
   (r/render [app] (js/document.getElementById "app")))
 
 (mount-root)
+
+(defn on-js-reload []
+  ;; optionally touch your app-state to force rerendering depending on
+  ;; your application
+  ;; (swap! app-state update-in [:__figwheel_counter] inc)
+)
