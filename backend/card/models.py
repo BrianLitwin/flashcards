@@ -3,6 +3,9 @@ from django.utils import timezone
 
 # Create your models here.
 # want a concept of a session or list
+# a concept of a source => url, or other
+# change the url when you click on items on the menu
+# a make list workflow =>
 
 class Group(models.Model):
     name = models.CharField(max_length=256)

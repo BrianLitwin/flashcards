@@ -18,6 +18,7 @@
              }]
    }
 
-   :figwheel {
-     :server-port 5000
-   })
+  :figwheel {
+   :server-port 5000
+
+})

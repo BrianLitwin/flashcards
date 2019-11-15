@@ -16,7 +16,8 @@
   :groups []
   :new-group-input ""
   :new-group-names {}
-})
+  :make-list/display-cards []
+  :make-list/list #{}})
 
 (doall
   (map make (keys init-state)))
@@ -128,12 +129,25 @@
 (rf/reg-event-fx
  :success-save-group-name
  (fn [{:keys [db]} [_ {:keys [id] :as group}]]
-   (.log js/console group)
    { :dispatch-n [
       [:groups (map (fn [item] (if (= (:id item) id) group item)) (:groups db))]
       [:change-group-name "" id]]}))
 
+(rf/reg-event-db
+  :success-cards-in-groups
+ (fn [db [_ response]]
+   (assoc db :make-list/display-cards response)))
 
+(rf/reg-event-fx
+ :cards-in-group
+ (fn [{:keys [db]} [_ id]]
+   {:http-xhrio
+    {:method           :get
+     :uri              (str "http://localhost:8001/api/group/" id "/cards/")
+     :format           (ajax/json-request-format)
+     :response-format  (ajax/json-response-format {:keywords? true})
+     :on-success       [:success-cards-in-groups]}}
+   ))
 
 (rf/reg-event-fx
  :save-group-name
@@ -164,7 +178,6 @@
    {:http-xhrio
     {:method           :get
      :uri              "http://localhost:8001/api/group/"
-     :params           {}
      :format           (ajax/json-request-format)
      :response-format  (ajax/json-response-format {:keywords? true})
      :on-success       [:success-fetch-groups]}}))

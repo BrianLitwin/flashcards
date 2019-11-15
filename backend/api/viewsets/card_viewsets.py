@@ -41,6 +41,12 @@ class GroupViewSet(ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
+    @action(detail=True, methods=['GET'])
+    def cards(self, request, pk):
+        group = Group.objects.get(pk=pk)
+        cards = CardSerializer(group.card_set.all(), many=True)
+        return Response(cards.data, 200)
+
 class CardAnswerViewset(ModelViewSet):
     permission_classes = (permissions.AllowAny,)
     queryset = CardAnswer.objects.all()

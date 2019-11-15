@@ -4,29 +4,24 @@
             [re-frame.core :as rf]
             [day8.re-frame.http-fx]))
 
-
 (defn sidebar-item [text view]
   (let [cur-view @(rf/subscribe [:view])]
     [:div {:on-click #(rf/dispatch [:view view])
-           :style {:color (if (= view cur-view) "red" "black")}}
+           :class
+            (if (= view cur-view)
+            ["sidebar-menu-item", "sidebar-menu-item__highlighted"]
+             "sidebar-menu-item")}
      text]))
 
 (defn sidebar []
-  [:div
-    {:style
-      {
-        :background "lightGray"
-        :height "100vh"
-        :width "225px"
-      }
-  }
+  [:div.sidebar-menu
   [sidebar-item "home" :home]
   [sidebar-item "groups" :groups]
+  [sidebar-item "lists" :lists]
   [sidebar-item "session" :session]
   ])
 
 (defn back-next []
-  (let [btn-style {:margin 40 :width 80 :height 30}]
   [:div {:style {
       :background "blue"
       :height "50px"
@@ -34,16 +29,14 @@
       :align-items "center"
       :justify-content "center"
     }}
-    [:button
+    [:button.back-next-btn
     { :disabled @(rf/subscribe [:cant-inc -1])
-      :on-click #(rf/dispatch [:inc-card -1])
-      :style btn-style}
+      :on-click #(rf/dispatch [:inc-card -1])}
       "Back"]
-    [:button
-     {:style btn-style
-      :disabled
+    [:button.back-next-btn
+     {:disabled
         (or (nil? @(rf/subscribe [:answer])) @(rf/subscribe [:cant-inc 1]))
-      :on-click #(rf/dispatch [:inc-card 1])} "Next"]]))
+      :on-click #(rf/dispatch [:inc-card 1])} "Next"]])
 
 (defn session []
   (let [card @(rf/subscribe [:card])
@@ -114,13 +107,55 @@
        [:button {:on-click #(rf/dispatch [:new-group text])} "Save"]
     (doall (for [group groups] ^{:key (:id group)} [group-info group]))]))
 
+(defn make-list []
+  (let [cards @(rf/subscribe [:make-list/display-cards])
+        list @(rf/subscribe [:make-list/list])
+        groups @(rf/subscribe [:groups])
+        new-list
+          #(rf/dispatch
+            [:make-list/list
+            (if (contains? list %) (disj list %) (conj list %))])
+        card-ids (->> cards (map :id) set)
+        all-added (= (clojure.set/intersection list card-ids) card-ids)
+        add-or-rm-all
+          #(rf/dispatch
+            [:make-list/list
+              (if all-added
+                (clojure.set/difference list card-ids)
+                (into list card-ids))])]
+  [:div
+    [:select
+      {:on-change
+         #(rf/dispatch [:cards-in-group (-> % .-target .-value)])}
+         (doall (for [{:keys [name id]} groups]
+           ^{:key id} [:option {:value id} name ]))]
+  [:div
+    [:input
+      {:type "checkbox"
+       :checked all-added
+       :on-change #(add-or-rm-all)}]
+       "Add all"]
+  (doall
+    (for [[i {:keys [id] :as card}] (map-indexed vector cards)]
+      ^{:key id}
+      [:ul
+      [:input
+        {:type "checkbox"
+        :checked (contains? list id)
+        :on-change #(new-list id)}]
+      (:question card)]))]))
+
+(defn lists []
+  [:div {:style {:width "100%"}}
+    [:button "Make new list"]
+    [make-list]])
+
 (def views
-  {:session session :home home :groups groups}
-)
+  {:session session :home home :groups groups :lists lists })
 
 (defn app []
   (let [view @(rf/subscribe [:view])]
-  [:div {:style {:display "flex"}}
+  [:div.page
   [sidebar]
   [(views view)]]))
 
@@ -131,4 +166,3 @@
   (r/render [app] (js/document.getElementById "app")))
 
 (mount-root)
-(.log js/console "seen")
