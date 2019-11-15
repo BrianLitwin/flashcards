@@ -4,7 +4,8 @@
                  [org.clojure/clojurescript "1.9.908"]
                  [reagent "0.9.0-rc2"]
                  [re-frame "0.11.0-rc1"]
-                 [day8.re-frame/http-fx "0.1.6"]]
+                 [day8.re-frame/http-fx "0.1.6"]
+                 [funcool/bide "1.6.0"]]
 
   :plugins [[lein-figwheel "0.5.13"]]
 

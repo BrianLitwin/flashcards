@@ -26836,3 +26836,1093 @@ notifying browser that file changed:  out/frontend/core.js
 [0mCompiling "main.js" from ["src"]...[0m
 [32mSuccessfully compiled "main.js" in 0.419 seconds.[0m
 notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.526 seconds.[0m
+notifying browser that file changed:  out/goog/deps.js
+notifying browser that file changed:  out/cljs_deps.js
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.548 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.539 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.485 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.441 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[31mFailed to compile "main.js" in 0.014 seconds.[0m
+[36m----  Could not Analyze  src/frontend/router.cljs   line:1  column:1  ----[0m
+
+  [1mLibrary name must be specified as a symbol in :require / :require-macros; offending spec: [] at line 1 src/frontend/router.cljs[0m
+
+  [33m1[0m  [1m(ns frontend.router[0m
+  [0m [0m  [33m^--- Library name must be specified as a symbol in :require / :require-macros; offending spec: [] at line 1 src/frontend/router.cljs[0m
+  [36m2[0m  [36m  (:require [])[0m
+  [36m3[0m  [36m)[0m
+
+[36m----  Analysis Error : Please see src/frontend/router.cljs  ----[0m
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.545 seconds.[0m
+notifying browser that file changed:  out/cljs_deps.js
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.401 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.561 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.516 seconds.[0m
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[31mFailed to compile "main.js" in 0.014 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:1  column:1  ----[0m
+
+  [1mLibrary name must be specified as a symbol in :require / :require-macros; offending spec: [] at line 1 src/frontend/core.cljs[0m
+
+  [33m1[0m  [1m(ns frontend.core[0m
+  [0m [0m  [33m^--- Library name must be specified as a symbol in :require / :require-macros; offending spec: [] at line 1 src/frontend/core.cljs[0m
+  [36m2[0m  [36m  (:require [reagent.core :as r][0m
+  [36m3[0m  [36m            [frontend.cards][0m
+  [36m4[0m  [36m            [][0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+[0mCompiling "main.js" from ["src"]...[0m
+[31mFailed to compile "main.js" in 0.279 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs  ----[0m
+
+  [1mNo such namespace: frontend., could not locate frontend/.cljs, frontend/.cljc, or JavaScript source providing "frontend." [0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.536 seconds.[0m
+notifying browser that file changed:  out/cljs_deps.js
+notifying browser that file changed:  out/frontend/core.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:4  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m  (r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m   ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m10[0m  [36m                    :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:4  ----[0m
+
+  [1mUse of undeclared Var r/start![0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m  (r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var r/start![0m
+  [36m10[0m  [36m                    :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:13  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m  (r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m            ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                    :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.605 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:4  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m  (r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m   ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m10[0m  [36m                    :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:4  ----[0m
+
+  [1mUse of undeclared Var r/start![0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m  (r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var r/start![0m
+  [36m10[0m  [36m                    :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:13  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m  (r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m            ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                    :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.608 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:2  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m10[0m  [36m                    :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:2  ----[0m
+
+  [1mUse of undeclared Var r/start![0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var r/start![0m
+  [36m10[0m  [36m                    :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:11  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                    :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.69 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:2  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m10[0m  [36m                  :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:2  ----[0m
+
+  [1mUse of undeclared Var r/start![0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var r/start![0m
+  [36m10[0m  [36m                  :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:11  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(r/start! router {:default :myapp/auth[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                  :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.566 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:2  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(r/start! router {:default :home[0m
+  [0m  [0m  [33m ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m10[0m  [36m                  :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:2  ----[0m
+
+  [1mUse of undeclared Var r/start![0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(r/start! router {:default :home[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var r/start![0m
+  [36m10[0m  [36m                  :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:11  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(r/start! router {:default :home[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                  :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.557 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                  :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.616 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                  :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.676 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.542 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m                     (reg-fx[0m
+  [36m13[0m  [36m                      :window/hash[0m
+  [36m14[0m  [36m                      (fn [hash][0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:12  column:23  ----[0m
+
+  [1mUse of undeclared Var frontend.router/reg-fx[0m
+
+  [36m 9[0m  [36m(bide/start! router {:default :home[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m                     (reg-fx[0m
+  [0m  [0m  [33m                      ^--- Use of undeclared Var frontend.router/reg-fx[0m
+  [36m13[0m  [36m                      :window/hash[0m
+  [36m14[0m  [36m                      (fn [hash][0m
+  [36m15[0m  [36m                        (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [36m16[0m  [36m                        (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:32  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:32  ----[0m
+
+  [1mUse of undeclared Var router/on-navigate[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var router/on-navigate[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:63  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:63  ----[0m
+
+  [1mUse of undeclared Var router/router[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- Use of undeclared Var router/router[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.644 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m:window/hash[0m
+  [36m14[0m  [36m(fn [hash][0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:12  column:2  ----[0m
+
+  [1mUse of undeclared Var frontend.router/reg-fx[0m
+
+  [36m 9[0m  [36m(bide/start! router {:default :home[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(reg-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var frontend.router/reg-fx[0m
+  [36m13[0m  [36m:window/hash[0m
+  [36m14[0m  [36m(fn [hash][0m
+  [36m15[0m  [36m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:10  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m:window/hash[0m
+  [36m14[0m  [36m(fn [hash][0m
+  [33m15[0m  [1m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m         ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:10  ----[0m
+
+  [1mUse of undeclared Var router/on-navigate[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m:window/hash[0m
+  [36m14[0m  [36m(fn [hash][0m
+  [33m15[0m  [1m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var router/on-navigate[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:41  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m:window/hash[0m
+  [36m14[0m  [36m(fn [hash][0m
+  [33m15[0m  [1m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                        ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:41  ----[0m
+
+  [1mUse of undeclared Var router/router[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m:window/hash[0m
+  [36m14[0m  [36m(fn [hash][0m
+  [33m15[0m  [1m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                        ^--- Use of undeclared Var router/router[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.633 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:12  column:2  ----[0m
+
+  [1mUse of undeclared Var frontend.router/reg-fx[0m
+
+  [36m 9[0m  [36m(bide/start! router {:default :home[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(reg-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var frontend.router/reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [36m15[0m  [36m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:10  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m         ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:10  ----[0m
+
+  [1mUse of undeclared Var router/on-navigate[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var router/on-navigate[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:41  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                        ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:41  ----[0m
+
+  [1mUse of undeclared Var router/router[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m  (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                        ^--- Use of undeclared Var router/router[0m
+  [36m16[0m  [36m  (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.604 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:12  column:2  ----[0m
+
+  [1mUse of undeclared Var frontend.router/reg-fx[0m
+
+  [36m 9[0m  [36m(bide/start! router {:default :home[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(reg-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var frontend.router/reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [36m15[0m  [36m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mUse of undeclared Var router/on-navigate[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var router/on-navigate[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mUse of undeclared Var router/router[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :window/hash[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- Use of undeclared Var router/router[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.647 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:12  column:2  ----[0m
+
+  [1mUse of undeclared Var frontend.router/reg-fx[0m
+
+  [36m 9[0m  [36m(bide/start! router {:default :home[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(reg-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var frontend.router/reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [36m15[0m  [36m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mUse of undeclared Var router/on-navigate[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var router/on-navigate[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mUse of undeclared Var router/router[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- Use of undeclared Var router/router[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.616 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:12  column:2  ----[0m
+
+  [1mUse of undeclared Var frontend.router/reg-fx[0m
+
+  [36m 9[0m  [36m(bide/start! router {:default :home[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(reg-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var frontend.router/reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [36m15[0m  [36m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mUse of undeclared Var router/on-navigate[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var router/on-navigate[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mUse of undeclared Var router/router[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [hash][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- Use of undeclared Var router/router[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.612 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [page][0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:12  column:2  ----[0m
+
+  [1mUse of undeclared Var frontend.router/reg-fx[0m
+
+  [36m 9[0m  [36m(bide/start! router {:default :home[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(reg-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var frontend.router/reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [page][0m
+  [36m15[0m  [36m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mUse of undeclared Var router/on-navigate[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var router/on-navigate[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mUse of undeclared Var router/router[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-window[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- Use of undeclared Var router/router[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.614 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:12  column:2  ----[0m
+
+  [1mUse of undeclared Var frontend.router/reg-fx[0m
+
+  [36m 9[0m  [36m(bide/start! router {:default :home[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(reg-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var frontend.router/reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [36m15[0m  [36m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mUse of undeclared Var router/on-navigate[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var router/on-navigate[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mUse of undeclared Var router/router[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs hash 1)))[0m
+  [0m  [0m  [33m                                         ^--- Use of undeclared Var router/router[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.656 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:12  column:2  ----[0m
+
+  [1mUse of undeclared Var frontend.router/reg-fx[0m
+
+  [36m 9[0m  [36m(bide/start! router {:default :home[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+  [36m11[0m  [36m[0m
+  [33m12[0m  [1m(reg-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var frontend.router/reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [36m15[0m  [36m   (apply router/on-navigate (bide/match router/router (subs page 1)))[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs page 1)))[0m
+  [0m  [0m  [33m          ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:11  ----[0m
+
+  [1mUse of undeclared Var router/on-navigate[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs page 1)))[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var router/on-navigate[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mNo such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs page 1)))[0m
+  [0m  [0m  [33m                                         ^--- No such namespace: router, could not locate router.cljs, router.cljc, or JavaScript source providing "router"[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:15  column:42  ----[0m
+
+  [1mUse of undeclared Var router/router[0m
+
+  [36m12[0m  [36m(reg-fx[0m
+  [36m13[0m  [36m :set-url[0m
+  [36m14[0m  [36m (fn [page][0m
+  [33m15[0m  [1m   (apply router/on-navigate (bide/match router/router (subs page 1)))[0m
+  [0m  [0m  [33m                                         ^--- Use of undeclared Var router/router[0m
+  [36m16[0m  [36m   (js/window.history.pushState nil nil hash)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.678 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/frontend/router.cljs   line:9  column:14  ----[0m
+
+  [1mUse of undeclared Var frontend.router/router[0m
+
+  [36m 5[0m  [36m    "A function which will be called on each route change."[0m
+  [36m 6[0m  [36m    [name params query][0m
+  [36m 7[0m  [36m    (println "Route change to: " name params query))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(bide/start! router {:default :home[0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var frontend.router/router[0m
+  [36m10[0m  [36m                     :on-navigate on-navigate})[0m
+
+[36m----  Compiler Warning : Please see src/frontend/router.cljs  ----[0m
+[32mSuccessfully compiled "main.js" in 0.501 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js
+[0mCompiling "main.js" from ["src"]...[0m
+[32mSuccessfully compiled "main.js" in 0.552 seconds.[0m
+notifying browser that file changed:  out/frontend/router.js

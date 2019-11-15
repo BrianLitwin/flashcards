@@ -1,7 +1,12 @@
 goog.addDependency("base.js", ['goog'], []);
 goog.addDependency("../cljs/core.js", ['cljs.core'], ['goog.string', 'goog.object', 'goog.math.Integer', 'goog.string.StringBuffer', 'goog.array', 'goog.math.Long']);
-goog.addDependency("../reagent/debug.js", ['reagent.debug'], ['cljs.core']);
+goog.addDependency("../bide/impl/helpers.js", ['bide.impl.helpers'], []);
+goog.addDependency("../bide/impl/path.js", ['bide.impl.path'], ['bide.impl.helpers']);
+goog.addDependency("../bide/impl/router.js", ['bide.impl.router'], ['bide.impl.path', 'bide.impl.helpers', 'goog.object']);
 goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
+goog.addDependency("../bide/core.js", ['bide.core'], ['bide.impl.helpers', 'cljs.core', 'goog.history.EventType', 'bide.impl.router', 'goog.history.Html5History', 'clojure.string', 'goog.events']);
+goog.addDependency("../frontend/router.js", ['frontend.router'], ['cljs.core', 'bide.core']);
+goog.addDependency("../reagent/debug.js", ['reagent.debug'], ['cljs.core']);
 goog.addDependency("../reagent/impl/util.js", ['reagent.impl.util'], ['cljs.core', 'reagent.debug', 'clojure.string']);
 goog.addDependency("../reagent/impl/batching.js", ['reagent.impl.batching'], ['reagent.impl.util', 'cljs.core', 'reagent.debug']);
 goog.addDependency("../clojure/set.js", ['clojure.set'], ['cljs.core']);
@@ -54,7 +59,7 @@ goog.addDependency("../re_frame/subs.js", ['re_frame.subs'], ['re_frame.interop'
 goog.addDependency("../re_frame/core.js", ['re_frame.core'], ['re_frame.interop', 're_frame.interceptor', 're_frame.events', 're_frame.fx', 're_frame.registrar', 'cljs.core', 're_frame.router', 'clojure.set', 're_frame.std_interceptors', 're_frame.loggers', 're_frame.subs', 're_frame.cofx', 're_frame.db']);
 goog.addDependency("../frontend/cards.js", ['frontend.cards'], ['ajax.core', 'cljs.core', 're_frame.core']);
 goog.addDependency("../day8/re_frame/http_fx.js", ['day8.re_frame.http_fx'], ['ajax.core', 'cljs.core', 'goog.net.ErrorCode', 're_frame.core']);
-goog.addDependency("../frontend/core.js", ['frontend.core'], ['reagent.core', 'cljs.core', 'frontend.cards', 're_frame.core', 'day8.re_frame.http_fx']);
+goog.addDependency("../frontend/core.js", ['frontend.core'], ['frontend.router', 'reagent.core', 'cljs.core', 'frontend.cards', 're_frame.core', 'day8.re_frame.http_fx']);
 goog.addDependency("../cljs/core/async/impl/protocols.js", ['cljs.core.async.impl.protocols'], ['cljs.core']);
 goog.addDependency("../cljs/core/async/impl/buffers.js", ['cljs.core.async.impl.buffers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async/impl/dispatch.js", ['cljs.core.async.impl.dispatch'], ['cljs.core', 'cljs.core.async.impl.buffers', 'goog.async.nextTick']);

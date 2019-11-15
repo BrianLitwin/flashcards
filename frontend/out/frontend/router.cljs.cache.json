@@ -1,0 +1,1 @@
+["^ ","~:rename-macros",["^ "],"~:renames",["^ "],"~:use-macros",["^ "],"~:excludes",["~#set",[]],"~:name","~$frontend.router","~:imports",null,"~:requires",["^ ","~$bide","~$bide.core","^:","^:"],"~:cljs.spec/speced-vars",[],"~:uses",null,"~:cljs.spec/registry-ref",[],"~:require-macros",null,"~:doc",null]

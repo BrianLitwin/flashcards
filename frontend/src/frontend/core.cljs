@@ -1,6 +1,7 @@
 (ns frontend.core
   (:require [reagent.core :as r]
             [frontend.cards]
+            [frontend.router]
             [re-frame.core :as rf]
             [day8.re-frame.http-fx]))
 
