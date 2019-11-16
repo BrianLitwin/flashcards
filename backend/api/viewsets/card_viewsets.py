@@ -1,8 +1,8 @@
 from rest_framework import permissions
 from rest_framework.decorators import action
 from rest_framework.viewsets import ModelViewSet
-from card.models import CardAnswer, Group, Card
-from card.serializers import CardSerializer, CardAnswerSerializer, GroupSerializer
+from card.models import CardAnswer, Group, Card, List
+from card.serializers import CardSerializer, CardAnswerSerializer, GroupSerializer, ListSerializer
 from rest_framework.response import Response
 from  django.utils import timezone
 
@@ -61,3 +61,8 @@ class CardAnswerViewset(ModelViewSet):
             return Response(201)
         else:
             return Response(serialized.errors, 401)
+
+class ListViewSet(ModelViewSet):
+    permission_classes = (permissions.AllowAny,)
+    queryset = List.objects.all()
+    serializer_class = ListSerializer

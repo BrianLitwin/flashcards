@@ -7,7 +7,12 @@ from django.utils import timezone
 # change the url when you click on items on the menu
 # a make list workflow =>
 
+class List(models.Model):
+    cards = models.ManyToManyField('card.Card', blank=True)
+    name = models.CharField(max_length=256)
+
 class Group(models.Model):
+    # the source of a card/s e.g. the website
     name = models.CharField(max_length=256)
     url = models.CharField(max_length=500, null=True)
 

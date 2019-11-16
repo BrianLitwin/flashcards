@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Group, CardAnswer, Card
+from .models import Group, CardAnswer, List, Card
 
 class GroupSerializer(ModelSerializer):
     class Meta:
@@ -14,4 +14,9 @@ class CardSerializer(ModelSerializer):
 class CardAnswerSerializer(ModelSerializer):
     class Meta:
         model = CardAnswer
+        fields = '__all__'
+
+class ListSerializer(ModelSerializer):
+    class Meta:
+        model = List
         fields = '__all__'
