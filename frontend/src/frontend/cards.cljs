@@ -15,6 +15,9 @@
   :session/view :start ;; start, session, finish
   :session/select-list nil ;; set the id here
   :session/list nil
+  :session/session-id nil
+
+  :stats/select-list nil
 
   :page :home
   :groups []
@@ -146,11 +149,12 @@
 (rf/reg-event-fx
   :post-answer
   (fn [_ [_ answer]]
-  (let [card (:id @(rf/subscribe [:session/card]))]
+  (let [card (:id @(rf/subscribe [:session/card]))
+        session-id @(rf/subscribe [:session/session-id])]
   {:http-xhrio
    {:method           :post
     :uri              "http://localhost:8001/api/answer/"
-    :params           {:card card :correct answer}
+    :params           {:card card :correct answer :session sesstion-id}
     :format           (ajax/json-request-format)
     :response-format  (ajax/json-response-format {:keywords? true})
     :on-success       [:success-post-answer]}})))

@@ -1,7 +1,7 @@
 (ns frontend.lists
   (:require [re-frame.core :as rf]
             [ajax.core :as ajax]
-            [frontend.utils :refer [keyed-list]]))
+            [frontend.common.utils :refer [keyed-list]]))
 
 (defn list-component [{:keys [name]}]
   [:div name])

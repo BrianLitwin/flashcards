@@ -1,7 +1,8 @@
 (ns frontend.core
     (:require [reagent.core :as r]
               [frontend.cards]
-              [frontend.session :refer [session]]
+              [frontend.session.core :refer [session]]
+              [frontend.stats.core :refer [session-stats]]
               [frontend.router :refer [set-url]]
               [frontend.lists :refer [lists-component]]
               [re-frame.core :as rf]
@@ -30,7 +31,8 @@
     [sidebar-item "groups" "groups"]
     [sidebar-item "new list" "new-list"]
     [sidebar-item "lists" "list"]
-    [sidebar-item "session" "session"]])
+    [sidebar-item "session" "session"]
+    [sidebar-item "stats" "stats"]])
 
 (defn home [] [:div "home"])
 
@@ -122,7 +124,8 @@
     :home home
     :groups groups
     :list lists-component
-    :new-list new-list})
+    :new-list new-list
+    :stats session-stats})
 
 (defn app []
   (let [page @(rf/subscribe [:page])]
