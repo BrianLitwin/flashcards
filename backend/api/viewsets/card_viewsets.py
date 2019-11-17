@@ -1,8 +1,8 @@
 from rest_framework import permissions
 from rest_framework.decorators import action
 from rest_framework.viewsets import ModelViewSet
-from card.models import CardAnswer, Group, Card, List
-from card.serializers import CardSerializer, CardAnswerSerializer, GroupSerializer, ListSerializer
+from card.models import CardAnswer, Group, Card, List, Session
+from card.serializers import CardSerializer, CardAnswerSerializer, GroupSerializer, ListSerializer, SessionSerializer
 from rest_framework.response import Response
 from  django.utils import timezone
 
@@ -53,16 +53,40 @@ class CardAnswerViewset(ModelViewSet):
     serializer_class = CardAnswerSerializer
 
     def create(self, request):
-        data = request.data
+        data = request.data.copy()
         data['date'] = timezone.now()
-        serialized = self.serializer_class(data=data)
-        if serialized.is_valid():
-            serialized.save()
+        answer = CardAnswer.objects.filter(
+            session_id=data['session'],
+            card_id=data['card']
+        ).first()
+
+        if answer:
+            answer.correct = data['correct']
+            answer.date = data['date']
+            answer.save()
             return Response(201)
+
         else:
-            return Response(serialized.errors, 401)
+            serialized = self.serializer_class(data=data)
+            if serialized.is_valid():
+                serialized.save()
+                return Response(201)
+            else:
+                return Response(serialized.errors, 401)
 
 class ListViewSet(ModelViewSet):
     permission_classes = (permissions.AllowAny,)
     queryset = List.objects.all()
     serializer_class = ListSerializer
+
+    @action(detail=True, methods=['GET'])
+    def sessions(self, request, pk):
+        list = List.objects.get(pk=pk)
+        sessions = list.session_set.all()
+        serialized = SessionSerializer(sessions, many=True)
+        return Response(serialized.data, 200)
+
+class SessionViewSet(ModelViewSet):
+    permission_classes = (permissions.AllowAny,)
+    queryset = Session.objects.all()
+    serializer_class = SessionSerializer

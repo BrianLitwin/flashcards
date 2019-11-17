@@ -7,6 +7,10 @@ from django.utils import timezone
 # change the url when you click on items on the menu
 # a make list workflow =>
 
+class Session(models.Model):
+    date = models.DateTimeField(auto_now_add=True)
+    list = models.ForeignKey('card.List', on_delete=models.CASCADE)
+
 class List(models.Model):
     cards = models.ManyToManyField('card.Card', blank=True)
     name = models.CharField(max_length=256)
@@ -30,3 +34,11 @@ class CardAnswer(models.Model):
     card = models.ForeignKey(Card, on_delete=models.CASCADE)
     date = models.DateTimeField(default=timezone.now)
     correct = models.BooleanField()
+    session = models.ForeignKey(
+        'card.Session',
+        on_delete=models.CASCADE,
+        related_name='answers'
+    )
+
+    class Meta:
+        unique_together = [['session', 'card']]
