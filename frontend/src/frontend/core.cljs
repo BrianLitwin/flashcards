@@ -1,7 +1,9 @@
 (ns frontend.core
     (:require [reagent.core :as r]
               [frontend.cards]
-              [frontend.router]
+              [frontend.session :refer [session]]
+              [frontend.router :refer [set-url]]
+              [frontend.lists :refer [lists-component]]
               [re-frame.core :as rf]
               [day8.re-frame.http-fx]))
 
@@ -13,78 +15,22 @@
 
 (defonce app-state (atom {:text "Hello world!"}))
 
-(defn sidebar-item [text view]
-  (let [cur-view @(rf/subscribe [:view])]
-    [:div {:on-click #(rf/dispatch [:view view])
+(defn sidebar-item [text page]
+  (let [current-page @(rf/subscribe [:page])]
+    [:div {:on-click #(set-url page)
            :class
-            (if (= view cur-view)
+            (if  (= page current-page)
             ["sidebar-menu-item", "sidebar-menu-item__highlighted"]
              "sidebar-menu-item")}
      text]))
 
 (defn sidebar []
   [:div.sidebar-menu
-  [sidebar-item "home" :home]
-  [sidebar-item "groups" :groups]
-  [sidebar-item "lists" :lists]
-  [sidebar-item "session" :session]
-  ])
-
-(defn back-next []
-  [:div {:style {
-      :background "blue"
-      :height "50px"
-      :display "flex"
-      :align-items "center"
-      :justify-content "center"
-    }}
-    [:button.back-next-btn
-    { :disabled @(rf/subscribe [:cant-inc -1])
-      :on-click #(rf/dispatch [:inc-card -1])}
-      "Back"]
-    [:button.back-next-btn
-     {:disabled
-        (or (nil? @(rf/subscribe [:answer])) @(rf/subscribe [:cant-inc 1]))
-      :on-click #(rf/dispatch [:inc-card 1])} "Next"]])
-
-(defn session []
-  (let [card @(rf/subscribe [:card])
-        answer @(rf/subscribe [:answer])
-        hide-answer @(rf/subscribe [:hide-answer])
-        progress @(rf/subscribe [:session-stats])
-        sesh @(rf/subscribe [:answered-correctly])]
-  [:div {:style {:background "lightBlue" :flexGrow 1 :display "flex" :flexDirection "column"}}
-  [:p (str (:correct sesh) " / " (:total sesh))]
-  [:p (str (:index progress) " / " (:total progress))]
-  [back-next]
-  [:div
-    [:button
-      {:on-click #(rf/dispatch [:set-answer false])
-       :style
-        {:background (if (false? answer) "lightBlue")}}
-        "Incorrect"]
-    [:button
-      {:on-click #(rf/dispatch [:set-answer true])
-       :style
-        {:background (if (true? answer) "lightBlue")}}
-        "Correct"]]
-    [:div
-      [:button
-        {:on-click
-          #(rf/dispatch [:hide-answer (not hide-answer)])}
-      "Show Answer"
-      ]
-    ]
-
-    [:div (:id card)]
-    [:div (:question card)]
-    [:div
-      {:style
-       {:display (if hide-answer "none" "inline-block")
-        :white-space "pre"}
-       :rows 30
-       :cols 300}
-      (:answer card)]]))
+    [sidebar-item "home" "home"]
+    [sidebar-item "groups" "groups"]
+    [sidebar-item "new list" "new-list"]
+    [sidebar-item "lists" "list"]
+    [sidebar-item "session" "session"]])
 
 (defn home [] [:div "home"])
 
@@ -125,7 +71,9 @@
             [:make-list/list
             (if (contains? list %) (disj list %) (conj list %))])
         card-ids (->> cards (map :id) set)
-        all-added (= (clojure.set/intersection list card-ids) card-ids)
+        all-added (and
+                    (= (clojure.set/intersection list card-ids) card-ids)
+                    (-> card-ids count (= 0) not))
         add-or-rm-all
           #(rf/dispatch
             [:make-list/list
@@ -149,36 +97,44 @@
       ^{:key id}
       [:ul
       [:input
-        {:type "checkbox"
-        :checked (contains? list id)
-        :on-change #(new-list id)}]
+      {:type "checkbox"
+       :checked (contains? list id)
+       :on-change #(new-list id)}]
       (:question card)]))]))
 
-(defn lists []
+(defn new-list []
+  (let [name @(rf/subscribe [:make-list/name])
+        list @(rf/subscribe [:make-list/list])
+        disabled (and (= (count list) 0) (= (count name) 0))]
   [:div {:style {:width "100%"}}
     [:button "Make new list"]
-    [make-list]])
+    [:input
+      {:type "text"
+       :value name
+       :on-change
+        #(rf/dispatch [:make-list/name (-> % .-target .-value)])}]
+    [:button {:disabled disabled
+              :on-click #(rf/dispatch [:create-list])} "Save"]
+    [make-list]]))
 
 (def views
-  {:session session :home home :groups groups :lists lists })
+  { :session session
+    :home home
+    :groups groups
+    :list lists-component
+    :new-list new-list})
 
 (defn app []
-  (let [view @(rf/subscribe [:view])]
+  (let [page @(rf/subscribe [:page])]
   [:div.page
   [sidebar]
-  [(views view)]]))
-
+  [(views page)]]))
 
 (defn mount-root []
   (rf/dispatch-sync [:init])
   (rf/dispatch [:fetch-cards])
   (rf/dispatch [:fetch-groups])
+  (rf/dispatch [:fetch-lists])
   (r/render [app] (js/document.getElementById "app")))
 
 (mount-root)
-
-(defn on-js-reload []
-  ;; optionally touch your app-state to force rerendering depending on
-  ;; your application
-  ;; (swap! app-state update-in [:__figwheel_counter] inc)
-)

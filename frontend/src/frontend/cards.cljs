@@ -8,16 +8,22 @@
     (rf/reg-event-db key (fn [db [_ value]] (assoc db key value)))))
 
 (def init-state
- {:cards []
-  :answers []
-  :card-index 0
-  :hide-answer true
-  :view :home
+ {
+  :session/answers []
+  :session/card-index 0
+  :session/hide-answer true
+  :session/view :start ;; start, session, finish
+  :session/select-list nil ;; set the id here
+  :session/list nil
+
+  :page :home
   :groups []
+  :lists []
   :new-group-input ""
   :new-group-names {}
   :make-list/display-cards []
-  :make-list/list #{}})
+  :make-list/list #{}
+  :make-list/name "" })
 
 (doall
   (map make (keys init-state)))
@@ -27,64 +33,6 @@
  (fn [db]
    (merge db init-state)))
 
-(rf/reg-event-db
- :inc-card
- (fn [{:keys [card-index answers] :as db} [_ n]]
-   (let [new-n (+ card-index n)
-         hide-answer
-         (and
-           (> new-n card-index)
-           (-> answers (get new-n) nil?))]
-   (assoc
-     db
-     :card-index new-n
-     :hide-answer hide-answer ))))
-
-(rf/reg-sub
-  :cant-inc
-  :<- [:cards]
-  :<- [:card-index]
-  (fn [[cards i] [_ n]]
-    (let [new-n (+ i n)
-          under (> 0 new-n)
-          over (>= new-n (count cards))]
-        (or under over))))
-
-(rf/reg-sub
- :card
- :<- [:cards]
- :<- [:card-index]
- (fn [[cards i]] (get cards i)))
-
-(rf/reg-sub
- :answer
- :<- [:answers]
- :<- [:card-index]
- (fn [[answers i]] (get answers i)))
-
-(rf/reg-sub
- :answered-correctly
- :<- [:answers]
- (fn [answers]
-   (let [answered (filter #(not (nil? %)) answers)
-         correct (filter true? answered)]
-    {:correct (count correct) :total (count answered)})))
-
-(rf/reg-sub
- :session-stats
- :<- [:cards]
- :<- [:card-index]
- (fn [[cards i]]
-   {:index i :total (count cards)}))
-
-(rf/reg-event-fx
- :set-answer
- (fn [{:keys [db] :as db} [_ answer]]
-   (let [{:keys [answers card-index]} db]
-    {:db (assoc db
-          :answers
-          (assoc answers card-index answer))
-     :dispatch [:post-answer answer]})))
 
 (rf/reg-event-db
  :change-group-name
@@ -106,8 +54,8 @@
   :success-fetch-cards
   (fn [db [_ response]]
     (assoc db
-      :cards response
-      :answers (-> response count (repeat nil) vec))))
+      :session/cards response
+      :session/answers (-> response count (repeat nil) vec))))
 
 (rf/reg-event-db
  :success-post-answer
@@ -198,7 +146,7 @@
 (rf/reg-event-fx
   :post-answer
   (fn [_ [_ answer]]
-  (let [card (:id @(rf/subscribe [:card]))]
+  (let [card (:id @(rf/subscribe [:session/card]))]
   {:http-xhrio
    {:method           :post
     :uri              "http://localhost:8001/api/answer/"
