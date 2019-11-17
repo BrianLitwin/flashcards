@@ -8,7 +8,7 @@
 
 (defn session-stats []
   [:div
-    [list-dropdown {:event-id :stats/select-list}]
+    [list-dropdown {:event-id :stats/display-list-sessions}]
     [table {:headers ["1 " "header 2"]
             :rows [["1" "2"]["3" "4"]]
 

@@ -17,7 +17,8 @@
   :session/list nil
   :session/session-id nil
 
-  :stats/select-list nil
+  :stats/sessions []
+  :stats/select-list-id nil
 
   :page :home
   :groups []

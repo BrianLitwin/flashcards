@@ -20782,3 +20782,811 @@ Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"].
 [32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.419 seconds.[0m
 notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
 notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.453 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.311 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.922 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/session/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.838 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/session/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.863 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.872 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.904 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:12  column:33  ----[0m
+
+  [1mUse of undeclared Var frontend.stats.dispatchers/list-id[0m
+
+  [36m 8[0m  [36m(let [card (:id @(rf/subscribe [:session/card]))][0m
+  [36m 9[0m  [36m  {:http-xhrio[0m
+  [36m10[0m  [36m   {:method           :post[0m
+  [36m11[0m  [36m    :uri              "http://localhost:8001/api/session/"[0m
+  [33m12[0m  [1m    :params           {:list list-id}[0m
+  [0m  [0m  [33m                             ^--- Use of undeclared Var frontend.stats.dispatchers/list-id[0m
+  [36m13[0m  [36m    :format           (ajax/json-request-format)[0m
+  [36m14[0m  [36m    :response-format  (ajax/json-response-format {:keywords? true})[0m
+  [36m15[0m  [36m    :on-success       [:success-create-session]}})))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.833 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.871 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.87 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.803 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.835 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.821 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.866 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:5  column:1  ----[0m
+
+  [1mWrong number of args (0) passed to re-frame.core/reg-event-db[0m
+
+  [36m 1[0m  [36m(ns frontend.stats.dispatchers[0m
+  [36m 2[0m  [36m (:require [re-frame.core :as rf][0m
+  [36m 3[0m  [36m           [ajax.core :as ajax]))[0m
+  [36m 4[0m  [36m[0m
+  [33m 5[0m  [1m(rf/reg-event-db )[0m
+  [0m  [0m  [33m^--- Wrong number of args (0) passed to re-frame.core/reg-event-db[0m
+  [36m 6[0m  [36m:success-list-session[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(rf/reg-event-fx[0m
+  [36m 9[0m  [36m :list-sessions[0m
+  [36m10[0m  [36m (fn [][0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.838 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:5  column:1  ----[0m
+
+  [1mWrong number of args (0) passed to re-frame.core/reg-event-db[0m
+
+  [36m 1[0m  [36m(ns frontend.stats.dispatchers[0m
+  [36m 2[0m  [36m (:require [re-frame.core :as rf][0m
+  [36m 3[0m  [36m           [ajax.core :as ajax]))[0m
+  [36m 4[0m  [36m[0m
+  [33m 5[0m  [1m(rf/reg-event-db[0m
+  [0m  [0m  [33m^--- Wrong number of args (0) passed to re-frame.core/reg-event-db[0m
+  [36m 6[0m  [36m[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m:success-list-session[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m(rf/reg-event-fx[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.861 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:5  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to re-frame.core/reg-event-db[0m
+
+  [36m 1[0m  [36m(ns frontend.stats.dispatchers[0m
+  [36m 2[0m  [36m (:require [re-frame.core :as rf][0m
+  [36m 3[0m  [36m           [ajax.core :as ajax]))[0m
+  [36m 4[0m  [36m[0m
+  [33m 5[0m  [1m(rf/reg-event-db[0m
+  [0m  [0m  [33m^--- Wrong number of args (1) passed to re-frame.core/reg-event-db[0m
+  [36m 6[0m  [36m:success-list-session[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m(rf/reg-event-fx[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.888 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:5  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to re-frame.core/reg-event-db[0m
+
+  [36m 1[0m  [36m(ns frontend.stats.dispatchers[0m
+  [36m 2[0m  [36m (:require [re-frame.core :as rf][0m
+  [36m 3[0m  [36m           [ajax.core :as ajax]))[0m
+  [36m 4[0m  [36m[0m
+  [33m 5[0m  [1m(rf/reg-event-db[0m
+  [0m  [0m  [33m^--- Wrong number of args (1) passed to re-frame.core/reg-event-db[0m
+  [36m 6[0m  [36m :success-list-session[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m(rf/reg-event-fx[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.84 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:5  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to re-frame.core/reg-event-db[0m
+
+  [36m 1[0m  [36m(ns frontend.stats.dispatchers[0m
+  [36m 2[0m  [36m (:require [re-frame.core :as rf][0m
+  [36m 3[0m  [36m           [ajax.core :as ajax]))[0m
+  [36m 4[0m  [36m[0m
+  [33m 5[0m  [1m(rf/reg-event-db[0m
+  [0m  [0m  [33m^--- Wrong number of args (1) passed to re-frame.core/reg-event-db[0m
+  [36m 6[0m  [36m :success-list-session[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m(rf/reg-event-fx[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.829 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:5  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to re-frame.core/reg-event-db[0m
+
+  [36m1[0m  [36m(ns frontend.stats.dispatchers[0m
+  [36m2[0m  [36m (:require [re-frame.core :as rf][0m
+  [36m3[0m  [36m           [ajax.core :as ajax]))[0m
+  [36m4[0m  [36m[0m
+  [33m5[0m  [1m(rf/reg-event-db[0m
+  [0m [0m  [33m^--- Wrong number of args (1) passed to re-frame.core/reg-event-db[0m
+  [36m6[0m  [36m :success-list-session[0m
+  [36m7[0m  [36m [0m
+  [36m8[0m  [36m)[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.939 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.907 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.702 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.818 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.689 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.909 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.827 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.009 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.818 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:8  column:4  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/assoc[0m
+
+  [36m 5[0m  [36m(rf/reg-event-db[0m
+  [36m 6[0m  [36m :success-list-session[0m
+  [36m 7[0m  [36m (fn [db [_ response]][0m
+  [33m 8[0m  [1m   (assoc db :stats/sessions)[0m
+  [0m  [0m  [33m   ^--- Wrong number of args (2) passed to cljs.core/assoc[0m
+  [36m 9[0m  [36m  ))[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(rf/reg-event-fx[0m
+  [36m13[0m  [36m :list-sessions[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.903 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/cards.cljs   line:158  column:60  ----[0m
+
+  [1mUse of undeclared Var frontend.cards/sesstion-id[0m
+
+  [36m154[0m  [36m        session-id @(rf/subscribe [:session/session-id])][0m
+  [36m155[0m  [36m  {:http-xhrio[0m
+  [36m156[0m  [36m   {:method           :post[0m
+  [36m157[0m  [36m    :uri              "http://localhost:8001/api/answer/"[0m
+  [33m158[0m  [1m    :params           {:card card :correct answer :session sesstion-id}[0m
+  [0m   [0m  [33m                                                           ^--- Use of undeclared Var frontend.cards/sesstion-id[0m
+  [36m159[0m  [36m    :format           (ajax/json-request-format)[0m
+  [36m160[0m  [36m    :response-format  (ajax/json-response-format {:keywords? true})[0m
+  [36m161[0m  [36m    :on-success       [:success-post-answer]}})))[0m
+  [36m162[0m  [36m[0m
+  [36m163[0m  [36m(rf/reg-event-fx[0m
+
+[36m----  Compiler Warning : Please see src/frontend/cards.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.076 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/cards.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:8  column:4  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/assoc[0m
+
+  [36m 5[0m  [36m(rf/reg-event-db[0m
+  [36m 6[0m  [36m :success-list-session[0m
+  [36m 7[0m  [36m (fn [db [_ response]][0m
+  [33m 8[0m  [1m   (assoc db :stats/sessions)[0m
+  [0m  [0m  [33m   ^--- Wrong number of args (2) passed to cljs.core/assoc[0m
+  [36m 9[0m  [36m  ))[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(rf/reg-event-fx[0m
+  [36m13[0m  [36m :list-sessions[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.83 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:8  column:4  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/assoc[0m
+
+  [36m 5[0m  [36m(rf/reg-event-db[0m
+  [36m 6[0m  [36m :success-list-session[0m
+  [36m 7[0m  [36m (fn [db [_ response]][0m
+  [33m 8[0m  [1m   (assoc db :stats/sessions )[0m
+  [0m  [0m  [33m   ^--- Wrong number of args (2) passed to cljs.core/assoc[0m
+  [36m 9[0m  [36m  ))[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(rf/reg-event-fx[0m
+  [36m13[0m  [36m :list-sessions[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.832 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.839 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.899 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/dispatchers.cljs   line:8  column:30  ----[0m
+
+  [1mUse of undeclared Var frontend.stats.dispatchers/response[0m
+
+  [36m 5[0m  [36m(rf/reg-event-db[0m
+  [36m 6[0m  [36m :success-list-session[0m
+  [36m 7[0m  [36m (fn [db [_ sessions]][0m
+  [33m 8[0m  [1m   (assoc db :stats/sessions response)))[0m
+  [0m  [0m  [33m                             ^--- Use of undeclared Var frontend.stats.dispatchers/response[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(rf/reg-event-fx[0m
+  [36m12[0m  [36m :list-sessions[0m
+  [36m13[0m  [36m (fn [][0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.865 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.838 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.842 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.837 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.671 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.725 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.898 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.582 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.716 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.385 seconds.[0m
+[36m----  Could not Analyze  src/frontend/stats/events.cljs  ----[0m
+
+  [1mNo such namespace: re-frame., could not locate re_frame/.cljs, re_frame/.cljc, or JavaScript source providing "re-frame." (Please check that namespaces with dashes use underscores in the ClojureScript file name) [0m
+
+[36m----  Analysis Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.767 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.789 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.755 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.876 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.772 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.337 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:6 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 6, col 1] A single colon is not a valid keyword.[0m
+
+  [36m4[0m  [36m(rf/reg-event-fx[0m
+  [36m5[0m  [36m :[0m
+  [33m6[0m  [1m)[0m
+  [0m [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 6, col 1] A single colon is not a valid keyword.[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.363 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:6 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 6, col 1] A single colon is not a valid keyword.[0m
+
+  [36m4[0m  [36m(rf/reg-event-fx[0m
+  [36m5[0m  [36m :[0m
+  [33m6[0m  [1m)[0m
+  [0m [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 6, col 1] A single colon is not a valid keyword.[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/events.cljs   line:4  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to re-frame.core/reg-event-fx[0m
+
+  [36m1[0m  [36m(ns frontend.stats.events[0m
+  [36m2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m3[0m  [36m[0m
+  [33m4[0m  [1m(rf/reg-event-fx[0m
+  [0m [0m  [33m^--- Wrong number of args (1) passed to re-frame.core/reg-event-fx[0m
+  [36m5[0m  [36m :stats/choose-list[0m
+  [36m6[0m  [36m [0m
+  [36m7[0m  [36m)[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/events.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.886 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/events.cljs   line:4  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to re-frame.core/reg-event-fx[0m
+
+  [36m1[0m  [36m(ns frontend.stats.events[0m
+  [36m2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m3[0m  [36m[0m
+  [33m4[0m  [1m(rf/reg-event-fx[0m
+  [0m [0m  [33m^--- Wrong number of args (1) passed to re-frame.core/reg-event-fx[0m
+  [36m5[0m  [36m :stats/display-list[0m
+  [36m6[0m  [36m[0m
+  [36m7[0m  [36m)[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/events.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.842 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/events.cljs   line:4  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to re-frame.core/reg-event-fx[0m
+
+  [36m1[0m  [36m(ns frontend.stats.events[0m
+  [36m2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m3[0m  [36m[0m
+  [33m4[0m  [1m(rf/reg-event-fx[0m
+  [0m [0m  [33m^--- Wrong number of args (1) passed to re-frame.core/reg-event-fx[0m
+  [36m5[0m  [36m :stats/display-list-stats[0m
+  [36m6[0m  [36m[0m
+  [36m7[0m  [36m)[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/events.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.838 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/events.cljs   line:4  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to re-frame.core/reg-event-fx[0m
+
+  [36m1[0m  [36m(ns frontend.stats.events[0m
+  [36m2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m3[0m  [36m[0m
+  [33m4[0m  [1m(rf/reg-event-fx[0m
+  [0m [0m  [33m^--- Wrong number of args (1) passed to re-frame.core/reg-event-fx[0m
+  [36m5[0m  [36m :stats/display-list-stats[0m
+  [36m6[0m  [36m [0m
+  [36m7[0m  [36m)[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/events.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.837 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.808 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.753 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.89 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.806 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.81 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.752 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.804 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.397 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/dispatchers.cljs   line:19 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/dispatchers.cljs [line 19, col 52] Unmatched delimiter ).[0m
+
+  [36m17[0m  [36m:format           (ajax/json-request-format)[0m
+  [36m18[0m  [36m:response-format  (ajax/json-response-format {:keywords? true})[0m
+  [33m19[0m  [1m:on-success       [:success-list-session]}})))[0m
+  [0m  [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/dispatchers.cljs [line 19, col 52] Unmatched delimiter ).[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.927 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.802 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.864 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.392 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:7 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+
+  [36m5[0m  [36m:stats/display-list-stats[0m
+  [36m6[0m  [36m(fn [{:keys [db]} [_ list-id]][0m
+  [33m7[0m  [1m  {: db (assoc db )}[0m
+  [0m [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+  [36m8[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.385 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:7 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+
+  [36m5[0m  [36m:stats/display-list-stats[0m
+  [36m6[0m  [36m(fn [{:keys [db]} [_ list-id]][0m
+  [33m7[0m  [1m  {: db (assoc db :stats/select-list )}[0m
+  [0m [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+  [36m8[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.377 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:7 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+
+  [36m5[0m  [36m:stats/display-list-stats[0m
+  [36m6[0m  [36m(fn [{:keys [db]} [_ list-id]][0m
+  [33m7[0m  [1m  {: db (assoc db :stats/select-list list-id)}[0m
+  [0m [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+  [36m8[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.423 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:7 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+
+  [36m5[0m  [36m:stats/display-list-stats[0m
+  [36m6[0m  [36m(fn [{:keys [db]} [_ list-id]][0m
+  [33m7[0m  [1m  {: db (assoc db :stats/select-list-id list-id)}[0m
+  [0m [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+  [36m8[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/cards.cljs   line:158  column:60  ----[0m
+
+  [1mUse of undeclared Var frontend.cards/sesstion-id[0m
+
+  [36m154[0m  [36m        session-id @(rf/subscribe [:session/session-id])][0m
+  [36m155[0m  [36m  {:http-xhrio[0m
+  [36m156[0m  [36m   {:method           :post[0m
+  [36m157[0m  [36m    :uri              "http://localhost:8001/api/answer/"[0m
+  [33m158[0m  [1m    :params           {:card card :correct answer :session sesstion-id}[0m
+  [0m   [0m  [33m                                                           ^--- Use of undeclared Var frontend.cards/sesstion-id[0m
+  [36m159[0m  [36m    :format           (ajax/json-request-format)[0m
+  [36m160[0m  [36m    :response-format  (ajax/json-response-format {:keywords? true})[0m
+  [36m161[0m  [36m    :on-success       [:success-post-answer]}})))[0m
+  [36m162[0m  [36m[0m
+  [36m163[0m  [36m(rf/reg-event-fx[0m
+
+[36m----  Compiler Warning : Please see src/frontend/cards.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.898 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/cards.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.404 seconds.[0m
+[36m----  Could not Analyze  src/frontend/stats/core.cljs   line:7 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+
+  [36m 5[0m  [36m    [re-frame.core :as rf][0m
+  [36m 6[0m  [36m    [frontend.common.components :refer [list-dropdown]][0m
+  [33m 7[0m  [1m    [frontend.common.components :refer [table]]))[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn session-stats [][0m
+  [36m10[0m  [36m  [:div[0m
+
+[36m----  Analysis Error : Please see src/frontend/stats/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.414 seconds.[0m
+[36m----  Could not Analyze  src/frontend/stats/core.cljs   line:7 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+
+  [36m 5[0m  [36m    [re-frame.core :as rf][0m
+  [36m 6[0m  [36m    [frontend.common.components :refer [list-dropdown]][0m
+  [33m 7[0m  [1m    [frontend.common.components :refer [table]]))[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn session-stats [][0m
+  [36m10[0m  [36m  [:div[0m
+
+[36m----  Analysis Error : Please see src/frontend/stats/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.426 seconds.[0m
+[36m----  Could not Analyze  src/frontend/stats/core.cljs   line:7 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+
+  [36m 5[0m  [36m    [re-frame.core :as rf][0m
+  [36m 6[0m  [36m    [frontend.common.components :refer [list-dropdown]][0m
+  [33m 7[0m  [1m    [frontend.common.components :refer [table]]))[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn session-stats [][0m
+  [36m10[0m  [36m  [:div[0m
+
+[36m----  Analysis Error : Please see src/frontend/stats/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.751 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.759 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.387 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:7 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+
+  [36m5[0m  [36m:stats/display-list-stats[0m
+  [36m6[0m  [36m(fn [{:keys [db]} [_ list-id]][0m
+  [33m7[0m  [1m  {: db (assoc db :stats/select-list-id list-id)}[0m
+  [0m [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+  [36m8[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.385 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:7 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+
+  [36m5[0m  [36m:stats/display-list-stats[0m
+  [36m6[0m  [36m(fn [{:keys [db]} [_ list-id]][0m
+  [33m7[0m  [1m  {: db (assoc db :stats/select-list-id list-id)}[0m
+  [0m [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 7, col 7] A single colon is not a valid keyword.[0m
+  [36m8[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.831 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.45 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:9 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 9, col 1] A single colon is not a valid keyword.[0m
+
+  [36m 7[0m  [36m{:db (assoc db :stats/select-list-id list-id)[0m
+  [36m 8[0m  [36m  :[0m
+  [33m 9[0m  [1m}[0m
+  [0m  [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 9, col 1] A single colon is not a valid keyword.[0m
+  [36m10[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.392 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:9 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 9, col 1] A single colon is not a valid keyword.[0m
+
+  [36m 7[0m  [36m{:db (assoc db :stats/select-list-id list-id)[0m
+  [36m 8[0m  [36m :[0m
+  [33m 9[0m  [1m}[0m
+  [0m  [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 9, col 1] A single colon is not a valid keyword.[0m
+  [36m10[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.656 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.4 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:9 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 9, col 5] The map literal starting with :db on line 7 column 4 contains 3 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m 7[0m  [36m{:db (assoc db :stats/select-list-id list-id)[0m
+  [36m 8[0m  [36m :dispatch[0m
+  [33m 9[0m  [1m}[0m
+  [0m  [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 9, col 5] The map literal starting with :db on line 7 column 4 contains 3 form(s). Map literals must contain an even number of forms.[0m
+  [36m10[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.392 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:8 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 8, col 17] Invalid keyword: :.[0m
+
+  [36m 6[0m  [36m(fn [{:keys [db]} [_ list-id]][0m
+  [36m 7[0m  [36m  {:db (assoc db :stats/select-list-id list-id)[0m
+  [33m 8[0m  [1m   :dispatch [:][0m
+  [0m  [0m  [33m   /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 8, col 17] Invalid keyword: :.[0m
+  [36m 9[0m  [36m  }[0m
+  [36m10[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.378 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/events.cljs   line:8 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 8, col 17] Invalid keyword: :.[0m
+
+  [36m 6[0m  [36m(fn [{:keys [db]} [_ list-id]][0m
+  [36m 7[0m  [36m  {:db (assoc db :stats/select-list-id list-id)[0m
+  [33m 8[0m  [1m   :dispatch [:][0m
+  [0m  [0m  [33m   /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/events.cljs [line 8, col 17] Invalid keyword: :.[0m
+  [36m 9[0m  [36m  }[0m
+  [36m10[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/events.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.851 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.797 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.845 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.791 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.764 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.741 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.842 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.402 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/subs.cljs   line:11 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/subs.cljs [line 11, col 6] The map literal starting with :headers on line 8 column 5 contains 3 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m 9[0m  [36m  :headers (map )[0m
+  [36m10[0m  [36m  :rows[0m
+  [33m11[0m  [1m}[0m
+  [0m  [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/subs.cljs [line 11, col 6] The map literal starting with :headers on line 8 column 5 contains 3 form(s). Map literals must contain an even number of forms.[0m
+  [36m12[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/subs.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.415 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/subs.cljs   line:11 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/subs.cljs [line 11, col 6] The map literal starting with :headers on line 8 column 5 contains 3 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m 9[0m  [36m  :headers (map :date sessions)[0m
+  [36m10[0m  [36m  :rows[0m
+  [33m11[0m  [1m}[0m
+  [0m  [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/subs.cljs [line 11, col 6] The map literal starting with :headers on line 8 column 5 contains 3 form(s). Map literals must contain an even number of forms.[0m
+  [36m12[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/subs.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.406 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/subs.cljs   line:11 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/subs.cljs [line 11, col 6] The map literal starting with :headers on line 8 column 5 contains 3 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m 9[0m  [36m  :headers (map :date sessions)[0m
+  [36m10[0m  [36m  :rows [0m
+  [33m11[0m  [1m}[0m
+  [0m  [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/subs.cljs [line 11, col 6] The map literal starting with :headers on line 8 column 5 contains 3 form(s). Map literals must contain an even number of forms.[0m
+  [36m12[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/subs.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:10  column:13  ----[0m
+
+  [1mWrong number of args (0) passed to cljs.core/map[0m
+
+  [36m 6[0m  [36m:<- [:stats/sessions][0m
+  [36m 7[0m  [36m(fn [sessions][0m
+  [36m 8[0m  [36m  {[0m
+  [36m 9[0m  [36m    :headers (map :date sessions)[0m
+  [33m10[0m  [1m    :rows (map )[0m
+  [0m  [0m  [33m          ^--- Wrong number of args (0) passed to cljs.core/map[0m
+  [36m11[0m  [36m  }[0m
+  [36m12[0m  [36m  ))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.764 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.769 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.008 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/events.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.446 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/dispatchers.cljs   line:19 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/dispatchers.cljs [line 19, col 48] Unmatched delimiter }.[0m
+
+  [36m17[0m  [36m:format           (ajax/json-request-format)[0m
+  [36m18[0m  [36m:response-format  (ajax/json-response-format {:keywords? true})[0m
+  [33m19[0m  [1m:on-success       [:success-list-session]}}))[0m
+  [0m  [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/dispatchers.cljs [line 19, col 48] Unmatched delimiter }.[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/dispatchers.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.948 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.892 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.927 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
