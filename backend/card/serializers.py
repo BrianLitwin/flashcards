@@ -17,6 +17,8 @@ class CardAnswerSerializer(ModelSerializer):
         fields = '__all__'
 
 class ListSerializer(ModelSerializer):
+    cards = CardSerializer(many=True)
+
     class Meta:
         model = List
         fields = '__all__'
