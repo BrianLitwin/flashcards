@@ -32,14 +32,13 @@
 
 (rf/reg-event-fx
   :fetch-list
-  (fn [_ [_ list-id]]
-    (let [id @(rf/subscribe [:session/select-list])]
+  (fn [_ [_ list-id success-handler]]
       {:http-xhrio
        {:method           :get
-        :uri              (str "http://localhost:8001/api/list/" id "/")
+        :uri              (str "http://localhost:8001/api/list/" list-id "/")
         :format           (ajax/json-request-format)
         :response-format  (ajax/json-response-format {:keywords? true})
-        :on-success       [:success-fetch-list]}})))
+        :on-success       [(or success-handler :success-fetch-list)]}}))
 
 (rf/reg-event-db
   :success-fetch-list

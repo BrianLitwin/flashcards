@@ -5,6 +5,7 @@
               [frontend.stats.core :refer [session-stats]]
               [frontend.router :refer [set-url]]
               [frontend.lists :refer [lists-component]]
+              [cljsjs.moment]
               [re-frame.core :as rf]
               [day8.re-frame.http-fx]))
 

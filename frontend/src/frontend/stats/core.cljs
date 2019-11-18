@@ -2,14 +2,13 @@
   (:require
     [frontend.stats.dispatchers]
     [frontend.stats.events]
+    [frontend.stats.subs]
     [re-frame.core :as rf]
     [frontend.common.components :refer [list-dropdown]]
     [frontend.common.components :refer [table]]))
 
 (defn session-stats []
-  [:div
-    [list-dropdown {:event-id :stats/display-list-sessions}]
-    [table {:headers ["1 " "header 2"]
-            :rows [["1" "2"]["3" "4"]]
-
-    }]])
+  (let [stats @(rf/subscribe [:stats/table-stats])]
+    [:div
+      [list-dropdown {:event-id :stats/display-list-sessions}]
+      [table stats]]))

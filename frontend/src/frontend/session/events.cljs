@@ -31,5 +31,5 @@
  :session/start
  (fn [{:keys [db]}]
    { :db (assoc db :session/view :session )
-     :dispatch-n [[:fetch-list]
+     :dispatch-n [[:fetch-list (:session/select-list db)]
                   [:create-session (:session/select-list db)]]}))

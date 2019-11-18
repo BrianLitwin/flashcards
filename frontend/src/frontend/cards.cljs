@@ -18,6 +18,7 @@
   :session/session-id nil
 
   :stats/sessions []
+  :stats/list nil
   :stats/select-list-id nil
 
   :page :home
@@ -155,7 +156,7 @@
   {:http-xhrio
    {:method           :post
     :uri              "http://localhost:8001/api/answer/"
-    :params           {:card card :correct answer :session sesstion-id}
+    :params           {:card card :correct answer :session session-id}
     :format           (ajax/json-request-format)
     :response-format  (ajax/json-response-format {:keywords? true})
     :on-success       [:success-post-answer]}})))

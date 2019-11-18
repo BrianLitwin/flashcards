@@ -6,7 +6,9 @@
   [:option {:value id} name])
 
 (defn list-dropdown [{:keys [event-id]}]
-  (let [lists @(rf/subscribe [:lists])]
+  (let [lists @(rf/subscribe [:lists])
+        on-change #(rf/dispatch [event-id (-> % .-target .-value)])
+  ]
     [:select.select-list
       {:on-change #(rf/dispatch [event-id (-> % .-target .-value)]) }
       (keyed-list lists make-option)]))

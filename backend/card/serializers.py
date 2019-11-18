@@ -17,14 +17,14 @@ class CardAnswerSerializer(ModelSerializer):
         fields = '__all__'
 
 class ListSerializer(ModelSerializer):
-    cards = CardSerializer(many=True)
+    cards = CardSerializer(read_only=True, many=True)
 
     class Meta:
         model = List
         fields = '__all__'
 
 class SessionSerializer(ModelSerializer):
-    answers = CardAnswerSerializer(many=True)
+    answers = CardAnswerSerializer(read_only=True, many=True)
 
     class Meta:
         model = Session

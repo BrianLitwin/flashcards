@@ -8,7 +8,7 @@
    (assoc db :stats/sessions sessions)))
 
 (rf/reg-event-fx
- :list-sessions
+ :fetch-list-sessions
  (fn [_ [_ list-id]]
    {:http-xhrio
     {:method           :get

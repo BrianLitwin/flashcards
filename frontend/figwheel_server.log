@@ -21590,3 +21590,411 @@ notifying browser that file changed:  resources/public/js/compiled/out/frontend/
 Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
 [32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.927 seconds.[0m
 notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.215 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.139 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:1  column:1  ----[0m
+
+  [1mLibrary name must be specified as a symbol in :require / :require-macros; offending spec: [] at line 1 src/frontend/core.cljs[0m
+
+  [33m1[0m  [1m(ns frontend.core[0m
+  [0m [0m  [33m^--- Library name must be specified as a symbol in :require / :require-macros; offending spec: [] at line 1 src/frontend/core.cljs[0m
+  [36m2[0m  [36m    (:require [reagent.core :as r][0m
+  [36m3[0m  [36m              [frontend.cards][0m
+  [36m4[0m  [36m              [frontend.session.core :refer [session]][0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.543 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.867 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.889 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.86 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.891 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.837 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.924 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.9 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.884 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.964 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.887 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:16  column:13  ----[0m
+
+  [1mWrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+  [36m12[0m  [36m:<- [:stats/sessions][0m
+  [36m13[0m  [36m:<- [:stats/list][0m
+  [36m14[0m  [36m(fn [[sessions list]][0m
+  [36m15[0m  [36m  { :headers (cons "" (map format-date sessions))[0m
+  [33m16[0m  [1m    :rows (get-questions list  session) }))[0m
+  [0m  [0m  [33m          ^--- Wrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:16  column:34  ----[0m
+
+  [1mUse of undeclared Var frontend.stats.subs/session[0m
+
+  [36m12[0m  [36m:<- [:stats/sessions][0m
+  [36m13[0m  [36m:<- [:stats/list][0m
+  [36m14[0m  [36m(fn [[sessions list]][0m
+  [36m15[0m  [36m  { :headers (cons "" (map format-date sessions))[0m
+  [33m16[0m  [1m    :rows (get-questions list  session) }))[0m
+  [0m  [0m  [33m                               ^--- Use of undeclared Var frontend.stats.subs/session[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.974 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:16  column:13  ----[0m
+
+  [1mWrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+  [36m12[0m  [36m:<- [:stats/sessions][0m
+  [36m13[0m  [36m:<- [:stats/list][0m
+  [36m14[0m  [36m(fn [[sessions list]][0m
+  [36m15[0m  [36m  { :headers (cons "" (map format-date sessions))[0m
+  [33m16[0m  [1m    :rows (get-questions list session) }))[0m
+  [0m  [0m  [33m          ^--- Wrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:16  column:33  ----[0m
+
+  [1mUse of undeclared Var frontend.stats.subs/session[0m
+
+  [36m12[0m  [36m:<- [:stats/sessions][0m
+  [36m13[0m  [36m:<- [:stats/list][0m
+  [36m14[0m  [36m(fn [[sessions list]][0m
+  [36m15[0m  [36m  { :headers (cons "" (map format-date sessions))[0m
+  [33m16[0m  [1m    :rows (get-questions list session) }))[0m
+  [0m  [0m  [33m                              ^--- Use of undeclared Var frontend.stats.subs/session[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.953 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:16  column:13  ----[0m
+
+  [1mWrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+  [36m12[0m  [36m:<- [:stats/sessions][0m
+  [36m13[0m  [36m:<- [:stats/list][0m
+  [36m14[0m  [36m(fn [[sessions list]][0m
+  [36m15[0m  [36m  { :headers (cons "" (map format-date sessions))[0m
+  [33m16[0m  [1m    :rows (get-questions list sessions) }))[0m
+  [0m  [0m  [33m          ^--- Wrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.959 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:16  column:13  ----[0m
+
+  [1mWrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+  [36m12[0m  [36m:<- [:stats/sessions][0m
+  [36m13[0m  [36m:<- [:stats/list][0m
+  [36m14[0m  [36m(fn [[sessions list]][0m
+  [36m15[0m  [36m  { :headers (cons "" (map format-date sessions))[0m
+  [33m16[0m  [1m    :rows (get-questions list sessions)}))[0m
+  [0m  [0m  [33m          ^--- Wrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.933 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:16  column:13  ----[0m
+
+  [1mWrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+  [36m12[0m  [36m:<- [:stats/sessions][0m
+  [36m13[0m  [36m:<- [:stats/list][0m
+  [36m14[0m  [36m(fn [[sessions list]][0m
+  [36m15[0m  [36m  { :headers (cons "" (map format-date sessions))[0m
+  [33m16[0m  [1m    :rows (get-questions list sessions)}))[0m
+  [0m  [0m  [33m          ^--- Wrong number of args (2) passed to frontend.stats.subs/get-questions[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.979 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.85 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.857 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.895 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.909 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.819 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.455 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/subs.cljs   line:6 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/subs.cljs [line 6, col 12] Invalid keyword: :.[0m
+
+  [36m5[0m  [36m(defn make-map [sessions][0m
+  [33m6[0m  [1m  (map #((:)))[0m
+  [0m [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/subs.cljs [line 6, col 12] Invalid keyword: :.[0m
+  [36m7[0m  [36m)[0m
+  [36m8[0m  [36m[0m
+  [36m9[0m  [36m(defn get-questions [list session][0m
+
+[36m----  Reader Error : Please see src/frontend/stats/subs.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:6  column:10  ----[0m
+
+  [1mWrong number of args (0) passed to :id[0m
+
+  [36m 2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m[0m
+  [36m 5[0m  [36m(defn make-map [sessions][0m
+  [33m 6[0m  [1m  (map #((:id)))[0m
+  [0m  [0m  [33m         ^--- Wrong number of args (0) passed to :id[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn get-questions [list session][0m
+  [36m10[0m  [36m  (map #(-> % :question vector) (:cards list)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.888 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.814 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:6  column:3  ----[0m
+
+  [1mWrong number of args (1) passed to cljs.core/reduce[0m
+
+  [36m 2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m[0m
+  [36m 5[0m  [36m(defn make-map [sessions][0m
+  [33m 6[0m  [1m  (reduce {})[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (1) passed to cljs.core/reduce[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn get-questions [list session][0m
+  [36m10[0m  [36m  (map #(-> % :question vector) (:cards list)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.043 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:6  column:3  ----[0m
+
+  [1mWrong number of args (1) passed to cljs.core/reduce[0m
+
+  [36m 2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m[0m
+  [36m 5[0m  [36m(defn make-map [sessions][0m
+  [33m 6[0m  [1m  (reduce {} )[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (1) passed to cljs.core/reduce[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn get-questions [list session][0m
+  [36m10[0m  [36m  (map #(-> % :question vector) (:cards list)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.952 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.036 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.815 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.886 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.45 seconds.[0m
+[36m----  Could not Compile  src/frontend/stats/subs.cljs  ----[0m
+
+  [1mfailed compiling file:src/frontend/stats/subs.cljs[0m
+
+[36m----  Compiler Error : Please see src/frontend/stats/subs.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.867 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.987 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.961 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.952 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:6  column:29  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/assoc[0m
+
+  [36m 2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m[0m
+  [36m 5[0m  [36m(defn make-map [sessions][0m
+  [33m 6[0m  [1m  (reduce (fn [map session] (assoc map (:id session) )) {} sessions)[0m
+  [0m  [0m  [33m                            ^--- Wrong number of args (2) passed to cljs.core/assoc[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn get-questions [list session][0m
+  [36m10[0m  [36m  (map #(-> % :question vector) (:cards list)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.887 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:6  column:29  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/assoc[0m
+
+  [36m 2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m[0m
+  [36m 5[0m  [36m(defn make-map [sessions][0m
+  [33m 6[0m  [1m  (reduce (fn [map session] (assoc map (:id session) )) {} sessions)[0m
+  [0m  [0m  [33m                            ^--- Wrong number of args (2) passed to cljs.core/assoc[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn get-questions [list session][0m
+  [36m10[0m  [36m  (map #(-> % :question vector) (:cards list)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.995 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:6  column:29  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/assoc[0m
+
+  [36m 2[0m  [36m  (:require [re-frame.core :as rf]))[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m[0m
+  [36m 5[0m  [36m(defn make-map [sessions][0m
+  [33m 6[0m  [1m  (reduce (fn [map session] (assoc map (:id session) )) {} sessions)[0m
+  [0m  [0m  [33m                            ^--- Wrong number of args (2) passed to cljs.core/assoc[0m
+  [36m 7[0m  [36m)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn get-questions [list session][0m
+  [36m10[0m  [36m  (map #(-> % :question vector) (:cards list)))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.009 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.822 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.873 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.888 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:10  column:8  ----[0m
+
+  [1mUse of undeclared Var frontend.stats.subs/session[0m
+
+  [36m 6[0m  [36m;   (reduce (fn [map session] (assoc map (:id session) )) {} sessions)[0m
+  [36m 7[0m  [36m; )[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn get-questions [list sessions][0m
+  [33m10[0m  [1m  (prn session)[0m
+  [0m  [0m  [33m       ^--- Use of undeclared Var frontend.stats.subs/session[0m
+  [36m11[0m  [36m  (map #(-> % :question vector) (:cards list)))[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(defn format-date [sesh][0m
+  [36m14[0m  [36m  (-> sesh :date js/moment (.format "MM/DD")))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.95 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.419 seconds.[0m
+[36m----  Could not Read  src/frontend/stats/subs.cljs   line:23 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/stats/subs.cljs [line 23, col 1] Unexpected EOF while reading item 6 of list, starting at line 9 and column 1.[0m
+
+[36m----  Reader Error : Please see src/frontend/stats/subs.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:10  column:15  ----[0m
+
+  [1mUse of undeclared Var frontend.stats.subs/session[0m
+
+  [36m 6[0m  [36m;   (reduce (fn [map session] (assoc map (:id session) )) {} sessions)[0m
+  [36m 7[0m  [36m; )[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn get-questions [list sessions][0m
+  [33m10[0m  [1m  (prn (first session))[0m
+  [0m  [0m  [33m              ^--- Use of undeclared Var frontend.stats.subs/session[0m
+  [36m11[0m  [36m  (map #(-> % :question vector) (:cards list)))[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(defn format-date [sesh][0m
+  [36m14[0m  [36m  (-> sesh :date js/moment (.format "MM/DD")))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.921 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/stats/subs.cljs   line:10  column:15  ----[0m
+
+  [1mUse of undeclared Var frontend.stats.subs/session[0m
+
+  [36m 6[0m  [36m;   (reduce (fn [map session] (assoc map (:id session) )) {} sessions)[0m
+  [36m 7[0m  [36m; )[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn get-questions [list sessions][0m
+  [33m10[0m  [1m  (prn (first session))[0m
+  [0m  [0m  [33m              ^--- Use of undeclared Var frontend.stats.subs/session[0m
+  [36m11[0m  [36m  (map #(-> % :question vector) (:cards list)))[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(defn format-date [sesh][0m
+  [36m14[0m  [36m  (-> sesh :date js/moment (.format "MM/DD")))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/stats/subs.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.897 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.02 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.983 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.987 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/stats/subs.js

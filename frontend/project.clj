@@ -12,7 +12,8 @@
                  [reagent "0.8.1"]
                  [re-frame "0.11.0-rc1"]
                  [day8.re-frame/http-fx "0.1.6"]
-                 [funcool/bide "1.6.0"]]
+                 [funcool/bide "1.6.0"]
+                 [cljsjs/moment "2.24.0-0"]]
 
   :plugins [[lein-figwheel "0.5.19"]
             [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]]
