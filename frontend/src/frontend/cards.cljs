@@ -72,9 +72,12 @@
  :success-add-group
  (fn [db] db))
 
-(rf/reg-event-db
+(rf/reg-event-fx
  :success-fetch-groups
- (fn [db [_ response]] (assoc db :groups response)))
+ (fn [{:keys [db]} [_ response]]
+   (let [group-id (-> response first :id)]
+   {:db (assoc db :groups response )
+    :dispatch [:cards-in-group group-id]}))) ;; fetch these so that in 'groups', it's initialized w/ some cards
 
 (rf/reg-event-db
  :success-new-group
