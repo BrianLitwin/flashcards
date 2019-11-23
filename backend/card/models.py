@@ -10,16 +10,23 @@ class List(models.Model):
     cards = models.ManyToManyField('card.Card', blank=True)
     name = models.CharField(max_length=256)
 
+    def __str__(self):
+        return f'{self.name}  ({self.cards.count()})'
+
 class Group(models.Model):
     # the source of a card/s e.g. the website
+    # update to that groups are added automatically
     name = models.CharField(max_length=256)
     url = models.CharField(max_length=500, null=True)
+
+    def __str__(self):
+        return self.name
 
 class Card(models.Model):
     question = models.TextField()
     answer = models.TextField()
     url = models.CharField(max_length=256, null=True)
-    page_offset = models.IntegerField()
+    page_offset = models.FloatField()
     groups = models.ManyToManyField(Group, blank=True)
 
     def __str__(self):

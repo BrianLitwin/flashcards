@@ -12,10 +12,14 @@
       :response-format  (ajax/json-response-format {:keywords? true})
       :on-success       [:success-fetch-lists]}}))
 
-(rf/reg-event-db
+(rf/reg-event-fx
   :success-fetch-lists
-  (fn [db [_ response]]
-    (assoc db :lists response)))
+  (fn [{:keys [db]} [_ response]]
+    (let [id (-> response first :id)]
+      {:db (assoc db :lists response
+                :session/select-list id)
+       :dispatch [:stats/display-list-sessions id] ;; prob not  ideal
+      })))
 
 (rf/reg-event-fx
   :fetch-list

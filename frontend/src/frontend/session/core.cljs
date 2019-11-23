@@ -58,9 +58,8 @@
       [:div
         {:style
          {:display (if hide-answer "none" "inline-block")
-          :white-space "pre"}
-         :rows 30
-         :cols 300}
+          :white-space "pre-wrap"
+          :max-width "80%"}}
         (:answer card)]]))
 
 (defn start-view []
