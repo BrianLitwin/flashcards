@@ -82,9 +82,8 @@ class ListViewSet(ModelViewSet):
     # total hack job.. look into this more.. why data['cards'] doesn't work
     # after adding a field to the serializer
     def create(self, request):
-        data = request.data
-        cards = data.get('cards')
-        serialized = self.serializer_class(data=data)
+        cards = request.data.getlist('cards')
+        serialized = self.serializer_class(data=request.data)
         if serialized.is_valid():
             list = serialized.save()
             for id in cards:
