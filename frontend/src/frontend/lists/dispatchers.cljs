@@ -31,10 +31,23 @@
         :response-format  (ajax/json-response-format {:keywords? true})
         :on-success       [(or success-handler :success-fetch-list)]}}))
 
+(defn randomize [vec]
+  (loop [v vec i 0]
+    (if (= i (count vec))
+    v
+    (let [n (rand-int (-> v count (- 1)))
+          p (rand-int (-> v count (- 1)))
+          n1 (get v n)
+          p1 (get v p)
+          v1 (assoc v p n1)
+          v2 (assoc v1 n p1)]
+      (recur v2 (inc i))))))
+
 (rf/reg-event-db
   :success-fetch-list
-  (fn [db [_ list]]
-    (assoc db :session/list list)))
+  (fn [db [_ {:keys [cards] :as list}]]
+    (let [cards (randomize cards)]
+    (assoc db :session/list (assoc list :cards cards)))))
 
 (rf/reg-event-fx
  :create-list
