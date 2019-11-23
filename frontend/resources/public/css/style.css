@@ -65,3 +65,10 @@
   height: 30px;
   background: lightGreen;
 }
+
+table td {
+  max-width: 20rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

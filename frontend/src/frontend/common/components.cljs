@@ -7,18 +7,16 @@
 
 (defn list-dropdown [{:keys [event-id]}]
   (let [lists @(rf/subscribe [:lists])
-        on-change #(rf/dispatch [event-id (-> % .-target .-value)])
-  ]
+        on-change #(rf/dispatch [event-id (-> % .-target .-value)])]
     [:select.select-list
       {:on-change #(rf/dispatch [event-id (-> % .-target .-value)]) }
       (keyed-list lists make-option)]))
 
 
 (defn table [{:keys [headers rows]}]
-  (let [make-header (fn [header] [:th header])
+  (let [make-header (fn [header index] (prn index)[:th header])
         make-row-item (fn [item] [:td item])
-        make-row (fn [row] [:tr (keyed-list row make-row-item)])]
-    [:table
-      [:tbody
-      [:tr (keyed-list headers make-header)]
-      (keyed-list rows make-row)]]))
+        make-row (fn [row] [:tr (keyed-list row make-row-item)])
+        headers (keyed-list headers make-header)
+        rows (keyed-list rows make-row)]
+    [:table [:tbody [:tr headers] rows]]))
