@@ -39,10 +39,11 @@
 
 (defn group-info [{:keys [name id url]}]
   (let [new-name @(rf/subscribe [:change-group-name id])]
-  [:div
-  {:on-click #(.open js/window url)
-   :style {:height "35px" :paddingLeft "25px" :cursor "pointer"}}
-    name
+  [:div.group-info
+  {:style {:height "35px" :paddingLeft "25px"}}
+  [:div {:style {:cursor "pointer"}
+         :on-click #(.open js/window url)}
+   name]
         [:div {:style {:paddingLeft "25px" :display "inline"}}
         "Rename"]
         [:input

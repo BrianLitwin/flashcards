@@ -76,3 +76,8 @@ table td {
 .lists-age {
   display: flex;
 }
+
+.group-info {
+  display: flex;
+  flex-direction: row;
+}
