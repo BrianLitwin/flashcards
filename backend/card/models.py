@@ -19,7 +19,7 @@ class Card(models.Model):
     question = models.TextField()
     answer = models.TextField()
     url = models.CharField(max_length=256, null=True)
-    page_offset = models.IntegerField()
+    page_offset = models.FloatField()
     groups = models.ManyToManyField(Group, blank=True)
 
     def __str__(self):
