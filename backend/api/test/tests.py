@@ -57,3 +57,16 @@ class TestAPIs(TestCase):
         self.assertEqual(Session.objects.count(), 2)
         response = self.client.get(f'/api/list/{list.pk}/sessions/')
         self.assertEqual(len(response.data), 2)
+
+    def test_list_create(self):
+        card_ids = []
+        for i in range(3):
+            card = CardFactory()
+            card_ids.append(card.id)
+
+        data = {'cards': card_ids, 'name': 'test_name'}
+        response = self.client.post('/api/list/', data)
+        
+        self.assertEqual(response.status_code, 201)
+        list = List.objects.get(id=response.data.get('id'))
+        self.assertEqual(list.cards.count(), 3)

@@ -3,15 +3,15 @@
               [frontend.cards]
               [frontend.session.core :refer [session]]
               [frontend.stats.core :refer [session-stats]]
+              [frontend.lists.core :refer [lists-page]]
               [frontend.router :refer [set-url]]
-              [frontend.lists :refer [lists-component]]
               [cljsjs.moment]
               [re-frame.core :as rf]
               [day8.re-frame.http-fx]))
 
 (enable-console-print!)
 
-(println "This text is printed from src/frontend/core.cljs. Go ahead and edit it and see reloading in action.")
+(println "This text is printed from src/frontend/core.cljs.  and edit it and see reloading in action.")
 
 ;; define your app data so that it doesn't get over-written on reload
 
@@ -124,7 +124,7 @@
   { :session session
     :home home
     :groups groups
-    :list lists-component
+    :list lists-page
     :new-list new-list
     :stats session-stats})
 
@@ -132,7 +132,7 @@
   (let [page @(rf/subscribe [:page])]
   [:div.page
   [sidebar]
-  [(views page)]]))
+  [(page views)]]))
 
 (defn mount-root []
   (rf/dispatch-sync [:init])

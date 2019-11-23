@@ -1,19 +1,6 @@
-(ns frontend.lists
+(ns frontend.lists.dispatchers
   (:require [re-frame.core :as rf]
-            [ajax.core :as ajax]
-            [frontend.common.utils :refer [keyed-list]]))
-
-(defn list-component [{:keys [name]}]
-  [:div name])
-
-(defn lists-component []
-  (let [lists @(rf/subscribe [:lists])]
-    [:div (keyed-list lists list-component)]))
-
-(rf/reg-event-fx
- :lists/init
- (fn []
-   { :dispatch [:fetch-lists]}))
+            [ajax.core :as ajax]))
 
 (rf/reg-event-fx
   :fetch-lists
@@ -61,6 +48,5 @@
 
 (rf/reg-event-db
   :success-create-list
-  (fn [db] db))
-
-(rf/dispatch [:lists/init])
+  (fn [{:keys [lists] :as db} [_ new-list]]
+    (assoc db :lists (conj lists new-list))))

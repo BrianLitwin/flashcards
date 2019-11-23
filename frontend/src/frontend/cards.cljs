@@ -21,6 +21,8 @@
   :stats/list nil
   :stats/select-list-id nil
 
+  :lists/list nil
+
   :page :home
   :groups []
   :lists []
