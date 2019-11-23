@@ -25,6 +25,7 @@ class ListSerializer(ModelSerializer):
 
 class SessionSerializer(ModelSerializer):
     answers = CardAnswerSerializer(read_only=True, many=True)
+    # list = ListSerializer(read_only=True)
 
     class Meta:
         model = Session

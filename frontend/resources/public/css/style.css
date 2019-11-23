@@ -72,3 +72,7 @@ table td {
   white-space: nowrap;
   overflow: hidden;
 }
+
+.lists-age {
+  display: flex;
+}

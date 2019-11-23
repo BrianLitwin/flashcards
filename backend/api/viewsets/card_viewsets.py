@@ -79,6 +79,23 @@ class ListViewSet(ModelViewSet):
     queryset = List.objects.all()
     serializer_class = ListSerializer
 
+    # total hack job.. look into this more.. why data['cards'] doesn't work
+    # after adding a field to the serializer
+    def create(self, request):
+        data = request.data
+        cards = data.get('cards')
+        serialized = self.serializer_class(data=data)
+        if serialized.is_valid():
+            list = serialized.save()
+            for id in cards:
+                card = Card.objects.get(id=id)
+                list.cards.add(card)
+            list.save()
+            serialized = ListSerializer(list)
+            return Response(serialized.data, 201)
+        else:
+            return Response(serialized.errors, 401)
+
     @action(detail=True, methods=['GET'])
     def sessions(self, request, pk):
         list = List.objects.get(pk=pk)
