@@ -30,6 +30,7 @@
 (rf/reg-event-fx
  :session/start
  (fn [{:keys [db]}]
+   (let [list (:session/select-list db)]
    { :db (assoc db :session/view :session )
-     :dispatch-n [[:fetch-list (:session/select-list db)]
-                  [:create-session (:session/select-list db)]]}))
+     :dispatch-n [[:fetch-list list]
+                  [:create-session list]]})))
