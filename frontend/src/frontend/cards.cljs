@@ -12,7 +12,7 @@
   :session/answers []
   :session/card-index 0
   :session/hide-answer true
-  :session/view :start ;; start, session, finish
+  :session/view :start ;;  :start :session :finish
   :session/select-list nil ;; set the id here
   :session/list nil
   :session/session-id nil
