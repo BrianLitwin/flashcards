@@ -5,7 +5,10 @@
    :session/inc-card
    (fn [db [_ n]]
      (let [card-index @(rf/subscribe [:session/card-index])
+           cards @(rf/subscribe [:session/cards])
            answers @(rf/subscribe [:session/answers])
+           complete? @(rf/subscribe [:session/complete?])
+           on-last-card (= (+ card-index 1) (count cards))
            new-n (+ card-index n)
            hide-answer
            (and
@@ -14,7 +17,8 @@
      (assoc
        db
        :session/card-index new-n
-       :session/hide-answer hide-answer ))))
+       :session/hide-answer hide-answer
+       :session/view (if (and on-last-card complete?) :finish :session)))))
 
 (rf/reg-event-fx
  :session/set-answer
@@ -34,3 +38,7 @@
    { :db (assoc db :session/view :session )
      :dispatch-n [[:fetch-list list]
                   [:create-session list]]})))
+
+(rf/reg-event-db
+ :session/finish
+ (fn [db] (assoc db :session/view :start)))

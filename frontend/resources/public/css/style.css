@@ -68,9 +68,14 @@
 
 table td {
   max-width: 20rem;
+  min-width: 3.75rem;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+table th {
+  text-align: left;
 }
 
 .lists-age {

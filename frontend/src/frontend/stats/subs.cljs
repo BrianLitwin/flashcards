@@ -1,17 +1,6 @@
 (ns frontend.stats.subs
   (:require [re-frame.core :as rf]))
 
-
-; (defn make-map [sessions]
-;   (reduce (fn [map session] (assoc map (:id session) )) {} sessions)
-; )
-
-; {:id 4, :answers [], :date "2019-11-17T16:41:37.908056Z", :list 6}
-
-; [{id: 109, date: "2019-11-19T18:46:52.063577Z", correct: true, card: 21, session: 6}
-;  {id: 110, date: "2019-11-19T18:46:55.930513Z", correct: false, card: 22, session: 6}
-;  {id: 111, date: "2019-11-19T18:47:01.844145Z", correct: true, card: 23, session: 6}]
-
 (defn get-questions [list sessions]
   (map #(-> % :question vector) (:cards list)))
 
@@ -23,6 +12,12 @@
     (true? item) "R"
     (false? item) "W"
     :else "" ))
+
+(defn get-stats [answers]
+  ;; answers = {32 true, 33 true, 34 true, 35 true}
+  (let [correct (->> answers (filter #(-> (get % 1) true?)) count)
+        total (count answers)]
+   (str correct " / " total)))
 
 (defn map-card-ids [answers]
   (reduce
@@ -38,8 +33,9 @@
   sessions))
 
 (defn get-answers [cards sessions]
-  (mapv #(lookup-answers % sessions) cards))
-
+  (cons
+    (cons "" (mapv get-stats sessions))
+      (mapv #(lookup-answers % sessions) cards)))
 
 (rf/reg-sub
   :stats/table-stats

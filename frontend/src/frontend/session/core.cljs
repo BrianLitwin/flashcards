@@ -72,7 +72,10 @@
     "Start"]]))
 
 (defn finish-view []
- [:div "finished"])
+  [:div
+  [:div "finished"]
+  [:button {:on-click #(rf/dispatch [:session/inc-card -1])} "go back"]
+  [:button {:on-click #(rf/dispatch [:session/finish])} "complete"]])
 
 (def views
  {:start start-view

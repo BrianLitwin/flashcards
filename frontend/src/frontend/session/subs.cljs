@@ -13,8 +13,9 @@
   (fn [[cards i] [_ n]]
     (let [new-n (+ i n)
           under (> 0 new-n)
-          over (>= new-n (count cards))]
-        (or under over))))
+          ; over (>= new-n (count cards)) show a finish screen when over
+          ]
+        under)))
 
 (rf/reg-sub
   :session/card
@@ -44,7 +45,7 @@
     {:index i :total (count cards)}))
 
 (rf/reg-sub
- :session/ready-to-finish
+ :session/complete?
  :<- [:session/cards]
  :<- [:session/answers]
  (fn [[cards answers]]
