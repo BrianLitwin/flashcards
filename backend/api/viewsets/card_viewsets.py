@@ -13,17 +13,24 @@ class CardViewSet(ModelViewSet):
     serializer_class = CardSerializer
 
     def create(self, request):
-        url = request.data.get('url')
-        group, created = Group.objects.get_or_create(url=url)
-        if created:
-            group.name = url
-            group.save()
-
         serialized = self.serializer_class(data=request.data)
         if serialized.is_valid():
+            url = request.data.get('url')
+            group, created = Group.objects.get_or_create(url=url)
+            if created:
+                group.name = url
+                group.save()
+
             card = serialized.save()
             card.groups.add(group)
             card.save()
+
+            # inefficient
+            for list in List.objects.all():
+                if group in list.groups.all():
+                    list.cards.add(card)
+                    list.save()
+
             return Response(201)
         else:
             return Response(serialized.errors, 401)
@@ -79,10 +86,8 @@ class ListViewSet(ModelViewSet):
     queryset = List.objects.all()
     serializer_class = ListSerializer
 
-    # total hack job.. look into this more.. why data['cards'] doesn't work
-    # after adding a field to the serializer
     def create(self, request):
-        cards = request.data.get('cards')
+        cards = request.data.getlist('cards')
         serialized = self.serializer_class(data=request.data)
         if serialized.is_valid():
             list = serialized.save()

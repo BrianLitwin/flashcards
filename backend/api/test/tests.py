@@ -15,13 +15,24 @@ class TestAPIs(TestCase):
         session = Session.objects.create(list=list)
         return (card, session, list)
 
-    def test_new_card(self):
+    def test_create_card(self):
         data = {'question': 'question 1', 'answer': 'answer 1', 'url': 'newUrl', 'page_offset': 0}
         response = self.client.post('/api/card/', data)
         group = Group.objects.get(name=data['url'], url=data['url'])
         card = Card.objects.get(question=data['question'])
         self.assertEqual(card.groups.count(), 1)
         self.assertEqual(card.groups.first(), group)
+
+    def test_create_card_added_to_list(self):
+        url = "new url"
+        data = {'question': 'question 1', 'answer': 'answer 1', 'url': url, 'page_offset': 0}
+        list = List.objects.create(name="test_list")
+        group = Group.objects.create(name="test group", url=url)
+        list.groups.add(group)
+        self.assertEqual(list.cards.count(), 0)
+        response = self.client.post('/api/card/', data)
+        self.assertEqual(list.cards.count(), 1)
+
 
     def test_card_answer(self):
         card = CardFactory()
@@ -64,9 +75,10 @@ class TestAPIs(TestCase):
             card = CardFactory()
             card_ids.append(card.id)
 
+        print(card_ids)
         data = {'cards': card_ids, 'name': 'test_name'}
         response = self.client.post('/api/list/', data)
-        
+
         self.assertEqual(response.status_code, 201)
         list = List.objects.get(id=response.data.get('id'))
         self.assertEqual(list.cards.count(), 3)

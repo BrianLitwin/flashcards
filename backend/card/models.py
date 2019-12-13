@@ -6,9 +6,15 @@ class Session(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     list = models.ForeignKey('card.List', on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f'{self.answers.count()}'
+
+# some way to link new cards from a group to a list
+
 class List(models.Model):
     cards = models.ManyToManyField('card.Card', blank=True)
     name = models.CharField(max_length=256)
+    groups = models.ManyToManyField('card.Group', blank=True)
 
     def __str__(self):
         return f'{self.name}  ({self.cards.count()})'
