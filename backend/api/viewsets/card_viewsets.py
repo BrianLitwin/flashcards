@@ -25,7 +25,7 @@ class CardViewSet(ModelViewSet):
             card.groups.add(group)
             card.save()
 
-            # inefficient
+            # TODO: make this more efficient
             for list in List.objects.all():
                 if group in list.groups.all():
                     list.cards.add(card)
@@ -60,8 +60,8 @@ class CardAnswerViewset(ModelViewSet):
     serializer_class = CardAnswerSerializer
 
     def create(self, request):
-        data = request.data.copy()
-        data['date'] = timezone.now()
+        data = request.data
+        date = timezone.now()
         answer = CardAnswer.objects.filter(
             session_id=data['session'],
             card_id=data['card']
@@ -69,14 +69,14 @@ class CardAnswerViewset(ModelViewSet):
 
         if answer:
             answer.correct = data['correct']
-            answer.date = data['date']
+            answer.date = date
             answer.save()
             return Response(201)
 
         else:
             serialized = self.serializer_class(data=data)
             if serialized.is_valid():
-                serialized.save()
+                serialized.save(date=date)
                 return Response(201)
             else:
                 return Response(serialized.errors, 401)

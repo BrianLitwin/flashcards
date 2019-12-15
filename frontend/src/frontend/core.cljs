@@ -67,7 +67,7 @@
       {:type "checkbox"
        :checked all-added
        :on-change #(add-or-rm-all)}]
-       "Add all"]
+       "Add group"]
   (doall
     (for [[i {:keys [id] :as card}] (map-indexed vector cards)]
       ^{:key id}
