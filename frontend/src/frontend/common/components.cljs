@@ -5,6 +5,10 @@
 (defn make-option [{:keys [name id]}]
   [:option {:value id} name])
 
+;;
+;; select list
+;;
+
 (defn list-dropdown [{:keys [event-id]}]
   (let [lists @(rf/subscribe [:lists])
         on-change #(rf/dispatch [event-id (-> % .-target .-value)])]
@@ -20,3 +24,20 @@
         headers (keyed-list headers make-header)
         rows (keyed-list rows make-row)]
     [:table [:tbody [:tr headers] rows]]))
+
+;;
+;; Groups
+;;
+
+(defn group-checkbox [{:keys [id name]} selected-groups update-id]
+  [:ul
+    [:input {
+      :type "checkbox"
+      :checked (contains? selected-groups id)
+      :on-change #(rf/dispatch [update-id id])}]
+   name])
+
+(defn groups-component [groups selected-groups update-id]
+    [:div
+      (doall (for [group groups]
+        ^{:key (:id group)} [group-checkbox group selected-groups update-id]))])

@@ -87,18 +87,28 @@ class ListViewSet(ModelViewSet):
     serializer_class = ListSerializer
 
     def create(self, request):
-        cards = request.data.getlist('cards')
+        groups = request.data.get('groups')
         serialized = self.serializer_class(data=request.data)
         if serialized.is_valid():
             list = serialized.save()
-            for id in cards:
-                card = Card.objects.get(id=id)
-                list.cards.add(card)
+            for id in groups:
+                group = Group.objects.get(id=id)
+                list.groups.add(group)
             list.save()
             serialized = ListSerializer(list)
             return Response(serialized.data, 201)
         else:
             return Response(serialized.errors, 401)
+
+    @action(detail=True, methods=['POST'])
+    def edit_groups(self, request, pk):
+        list = List.objects.get(pk=pk)
+        print(request.data)
+        groups = request.data.get('groups')
+        for group in groups:
+            list.groups.add(group)
+        list.save()
+        return Response(201)
 
     @action(detail=True, methods=['GET'])
     def sessions(self, request, pk):

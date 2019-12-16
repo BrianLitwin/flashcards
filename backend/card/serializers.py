@@ -18,6 +18,7 @@ class CardAnswerSerializer(ModelSerializer):
 
 class ListSerializer(ModelSerializer):
     cards = CardSerializer(read_only=True, many=True)
+    groups = GroupSerializer(read_only=True, many=True)
 
     class Meta:
         model = List

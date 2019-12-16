@@ -16,8 +16,7 @@
   :success-fetch-lists
   (fn [{:keys [db]} [_ response]]
     (let [id (-> response first :id)]
-      {:db (assoc db :lists response
-                :session/select-list id)
+      {:db (assoc db :lists response :session/select-list id)
        :dispatch [:stats/display-list-sessions id] ;; prob not  ideal
       })))
 
@@ -48,22 +47,3 @@
   (fn [db [_ {:keys [cards] :as list}]]
     (let [cards (randomize cards)]
     (assoc db :session/list (assoc list :cards cards)))))
-
-(rf/reg-event-fx
- :create-list
- (fn [{:keys [db]}]
-   (let [list @(rf/subscribe [:make-list/list])
-         name @(rf/subscribe [:make-list/name])]
-   {:db (assoc db :make-list/name "" :make-list/list #{})
-    :http-xhrio
-    {:method           :post
-     :uri              (str "http://localhost:8001/api/list/")
-     :params           {:name name :cards list}
-     :format           (ajax/json-request-format)
-     :response-format  (ajax/json-response-format {:keywords? true})
-     :on-success       [:success-create-list]}})))
-
-(rf/reg-event-db
-  :success-create-list
-  (fn [{:keys [lists] :as db} [_ new-list]]
-    (assoc db :lists (conj lists new-list))))

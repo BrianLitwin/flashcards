@@ -5,6 +5,8 @@
               [frontend.stats.core :refer [session-stats]]
               [frontend.lists.core :refer [lists-page]]
               [frontend.group.core :refer [groups]]
+              [frontend.edit-list.core :refer [edit-list]]
+              [frontend.make-list.core :refer [make-list-view]]
               [frontend.router :refer [set-url]]
               [cljsjs.moment]
               [re-frame.core :as rf]
@@ -32,73 +34,20 @@
     [sidebar-item "home" "home"]
     [sidebar-item "groups" "groups"]
     [sidebar-item "new list" "new-list"]
+    [sidebar-item "edit list" "edit-list"]
     [sidebar-item "lists" "list"]
     [sidebar-item "session" "session"]
     [sidebar-item "stats" "stats"]])
 
 (defn home [] [:div "home"])
 
-(defn make-list []
-  (let [cards @(rf/subscribe [:make-list/display-cards])
-        list @(rf/subscribe [:make-list/list])
-        groups @(rf/subscribe [:groups])
-        new-list
-          #(rf/dispatch
-            [:make-list/list
-            (if (contains? list %) (disj list %) (conj list %))])
-        card-ids (->> cards (map :id) set)
-        all-added (and
-                    (= (clojure.set/intersection list card-ids) card-ids)
-                    (-> card-ids count (= 0) not))
-        add-or-rm-all
-          #(rf/dispatch
-            [:make-list/list
-              (if all-added
-                (clojure.set/difference list card-ids)
-                (into list card-ids))])]
-  [:div
-    [:select
-      {:on-change
-         #(rf/dispatch [:cards-in-group (-> % .-target .-value)])}
-         (doall (for [{:keys [name id]} groups]
-           ^{:key id} [:option {:value id} name ]))]
-  [:div
-    [:input
-      {:type "checkbox"
-       :checked all-added
-       :on-change #(add-or-rm-all)}]
-       "Add group"]
-  (doall
-    (for [[i {:keys [id] :as card}] (map-indexed vector cards)]
-      ^{:key id}
-      [:ul
-      [:input
-      {:type "checkbox"
-       :checked (contains? list id)
-       :on-change #(new-list id)}]
-      (:question card)]))]))
-
-(defn new-list []
-  (let [name @(rf/subscribe [:make-list/name])
-        list @(rf/subscribe [:make-list/list])
-        disabled (and (= (count list) 0) (= (count name) 0))]
-  [:div {:style {:width "100%"}}
-    [:button "Make new list"]
-    [:input
-      {:type "text"
-       :value name
-       :on-change
-        #(rf/dispatch [:make-list/name (-> % .-target .-value)])}]
-    [:button {:disabled disabled
-              :on-click #(rf/dispatch [:create-list])} "Save"]
-    [make-list]]))
-
 (def views
   { :session session
     :home home
     :groups groups
     :list lists-page
-    :new-list new-list
+    :new-list make-list-view
+    :edit-list edit-list
     :stats session-stats})
 
 (defn app []

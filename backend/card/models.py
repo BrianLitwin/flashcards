@@ -9,15 +9,16 @@ class Session(models.Model):
     def __str__(self):
         return f'{self.answers.count()}'
 
-# some way to link new cards from a group to a list
-
+# change the name of List to something else
 class List(models.Model):
-    cards = models.ManyToManyField('card.Card', blank=True)
     name = models.CharField(max_length=256)
     groups = models.ManyToManyField('card.Group', blank=True)
 
+    def cards(self):
+        return [card for group in self.groups.all() for card in group.card_set.all()]
+
     def __str__(self):
-        return f'{self.name}  ({self.cards.count()})'
+        return f'{self.name}  ({len(self.cards())})'
 
 class Group(models.Model):
     # the source of a card/s e.g. the website

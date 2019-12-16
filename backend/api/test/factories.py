@@ -1,5 +1,5 @@
 from factory.django import DjangoModelFactory
-from card.models import Card
+from card.models import Card, List, Group
 
 class CardFactory(DjangoModelFactory):
     class Meta:
@@ -9,3 +9,11 @@ class CardFactory(DjangoModelFactory):
     answer = "answer"
     url = "google.com"
     page_offset = 0
+
+class GroupFactory(DjangoModelFactory):
+    class Meta:
+        model = Group
+
+class ListFactory(DjangoModelFactory):
+    class Meta:
+        model = List

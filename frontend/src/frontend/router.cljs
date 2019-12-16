@@ -16,6 +16,7 @@
      ["/list" :list]
      ["/session" :session]
      ["/stats" :stats]
+     ["/edit-list" :edit-list]
      ["*" :not-found]]))
 
 (bide/start! router {:default :home
