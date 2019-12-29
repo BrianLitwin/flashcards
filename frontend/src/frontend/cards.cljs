@@ -28,9 +28,13 @@
   :lists []
   :new-group-input ""
   :new-group-names {}
-  :make-list/display-cards []
-  :make-list/list #{}
-  :make-list/name "" })
+
+  :make-list/groups #{}
+  :make-list/name ""
+
+  :edit-list/groups #{}
+  :edit-list/list nil
+  })
 
 (doall
   (map make (keys init-state)))
@@ -76,8 +80,8 @@
  :success-fetch-groups
  (fn [{:keys [db]} [_ response]]
    (let [group-id (-> response first :id)]
-   {:db (assoc db :groups response )
-    :dispatch [:cards-in-group group-id]}))) ;; fetch these so that in 'groups', it's initialized w/ some cards
+   {:db (assoc db :groups response )})))
+    ;; :dispatch [:cards-in-group group-id]}))) ;; fetch these so that in 'groups', it's initialized w/ some cards
 
 (rf/reg-event-db
  :success-new-group
@@ -90,22 +94,6 @@
    { :dispatch-n [
       [:groups (map (fn [item] (if (= (:id item) id) group item)) (:groups db))]
       [:change-group-name "" id]]}))
-
-(rf/reg-event-db
-  :success-cards-in-groups
- (fn [db [_ response]]
-   (assoc db :make-list/display-cards response)))
-
-(rf/reg-event-fx
- :cards-in-group
- (fn [{:keys [db]} [_ id]]
-   {:http-xhrio
-    {:method           :get
-     :uri              (str "http://localhost:8001/api/group/" id "/cards/")
-     :format           (ajax/json-request-format)
-     :response-format  (ajax/json-response-format {:keywords? true})
-     :on-success       [:success-cards-in-groups]}}
-   ))
 
 (rf/reg-event-fx
  :save-group-name

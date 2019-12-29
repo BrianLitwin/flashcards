@@ -1,3 +1,4 @@
+
 .page {
   display: flex;
 }
@@ -85,4 +86,13 @@ table th {
 .group-info {
   display: flex;
   flex-direction: row;
+}
+
+.make-list-name-input {
+  border: solid black;
+}
+
+.make-list-view {
+  display: flex;
+  flex-direction: column;
 }

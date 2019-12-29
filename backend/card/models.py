@@ -4,14 +4,22 @@ from django.utils import timezone
 
 class Session(models.Model):
     date = models.DateTimeField(auto_now_add=True)
-    list = models.ForeignKey('card.List', on_delete=models.CASCADE)
-
-class List(models.Model):
-    cards = models.ManyToManyField('card.Card', blank=True)
-    name = models.CharField(max_length=256)
+    list = models.ForeignKey('card.List', on_delete=models.CASCADE, null=True)
+    test_all = models.BooleanField(default=False)
 
     def __str__(self):
-        return f'{self.name}  ({self.cards.count()})'
+        return f'{self.answers.count()}'
+
+# change the name of List to something else
+class List(models.Model):
+    name = models.CharField(max_length=256)
+    groups = models.ManyToManyField('card.Group', blank=True)
+
+    def cards(self):
+        return [card for group in self.groups.all() for card in group.card_set.all()]
+
+    def __str__(self):
+        return f'{self.name}  ({len(self.cards())})'
 
 class Group(models.Model):
     # the source of a card/s e.g. the website

@@ -5,6 +5,7 @@ from card.models import CardAnswer, Group, Card, List, Session
 from card.serializers import CardSerializer, CardAnswerSerializer, GroupSerializer, ListSerializer, SessionSerializer
 from rest_framework.response import Response
 from  django.utils import timezone
+from datetime import datetime, timedelta
 
 class CardViewSet(ModelViewSet):
     authentication_classes = [] # let any requests in for deving
@@ -13,17 +14,24 @@ class CardViewSet(ModelViewSet):
     serializer_class = CardSerializer
 
     def create(self, request):
-        url = request.data.get('url')
-        group, created = Group.objects.get_or_create(url=url)
-        if created:
-            group.name = url
-            group.save()
-
         serialized = self.serializer_class(data=request.data)
         if serialized.is_valid():
+            url = request.data.get('url')
+            group, created = Group.objects.get_or_create(url=url)
+            if created:
+                group.name = url
+                group.save()
+
             card = serialized.save()
             card.groups.add(group)
             card.save()
+
+            # TODO: make this more efficient
+            for list in List.objects.all():
+                if group in list.groups.all():
+                    list.cards.add(card)
+                    list.save()
+
             return Response(201)
         else:
             return Response(serialized.errors, 401)
@@ -53,8 +61,8 @@ class CardAnswerViewset(ModelViewSet):
     serializer_class = CardAnswerSerializer
 
     def create(self, request):
-        data = request.data.copy()
-        data['date'] = timezone.now()
+        data = request.data
+        date = timezone.now()
         answer = CardAnswer.objects.filter(
             session_id=data['session'],
             card_id=data['card']
@@ -62,14 +70,14 @@ class CardAnswerViewset(ModelViewSet):
 
         if answer:
             answer.correct = data['correct']
-            answer.date = data['date']
+            answer.date = date
             answer.save()
             return Response(201)
 
         else:
             serialized = self.serializer_class(data=data)
             if serialized.is_valid():
-                serialized.save()
+                serialized.save(date=date)
                 return Response(201)
             else:
                 return Response(serialized.errors, 401)
@@ -79,21 +87,29 @@ class ListViewSet(ModelViewSet):
     queryset = List.objects.all()
     serializer_class = ListSerializer
 
-    # total hack job.. look into this more.. why data['cards'] doesn't work
-    # after adding a field to the serializer
     def create(self, request):
-        cards = request.data.get('cards')
+        groups = request.data.get('groups')
         serialized = self.serializer_class(data=request.data)
         if serialized.is_valid():
             list = serialized.save()
-            for id in cards:
-                card = Card.objects.get(id=id)
-                list.cards.add(card)
+            for id in groups:
+                group = Group.objects.get(id=id)
+                list.groups.add(group)
             list.save()
             serialized = ListSerializer(list)
             return Response(serialized.data, 201)
         else:
             return Response(serialized.errors, 401)
+
+    @action(detail=True, methods=['POST'])
+    def edit_groups(self, request, pk):
+        list = List.objects.get(pk=pk)
+        print(request.data)
+        groups = request.data.get('groups')
+        for group in groups:
+            list.groups.add(group)
+        list.save()
+        return Response(201)
 
     @action(detail=True, methods=['GET'])
     def sessions(self, request, pk):
@@ -106,3 +122,18 @@ class SessionViewSet(ModelViewSet):
     permission_classes = (permissions.AllowAny,)
     queryset = Session.objects.all()
     serializer_class = SessionSerializer
+
+    @action(detail=False, methods=['GET'])
+    def testall(self, request):
+        last = Session.objects.filter(test_all=True).order_by('date').last()
+        week_ago = timezone.now() - timedelta(days=7)
+
+        if last is None or last.date <= week_ago:
+            session = Session.objects.create(test_all=True)
+            serializer = self.serializer_class(session, data={'test_all': True})
+            if serializer.is_valid():
+                return Response(serializer.data, 200)
+            else:
+                return Response(serializer.error, 200)
+        else:
+            return Response(self.serializer_class(last).data, 200)
