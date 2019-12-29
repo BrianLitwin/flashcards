@@ -7,48 +7,48 @@
 
 ;; views
 
-(defn back-next-model
-  [{:keys [can-increment-fn next-item-fn total]}]
-  (let [current (r/atom 0)
-        can-inc-by?
-            #(let [new-n (+ % current)
-                  over (> new-n total)
-                  under (> 0 new-n)]
-                  (not (or over under (not (can-increment-fn)))))
-        increment (do
-                    (next-item-fn)
-                    (reset! current (+ % @current)))]
-          (prn current)
-      {:can-inc-by? can-inc-by? :increment increment}))
-
-(defn back-next-buttons [model-options]
-  (let [{:keys [can-inc-by? increment]} (back-next-model model-options)]
-  [:div.session-nav-container
-    [:button.back-next-btn
-    {:disabled (can-inc-by? -1)
-     :on-click #(increment -1)}
-      "Back"]
-    [:button.back-next-btn
-     {:disabled (not (can-inc-by? 1))
-      :on-click #(increment 1)}
-      "Next"]]))
-
-(defn back-next []
-  (back-next-buttons
-    {:can-increment-fn #(nil? @(rf/subscribe [:session/answer]))
-     :next-item-fn #(rf/dispatch [:session/inc-card -1])
-     :total #(count @(rf/subscribe [:session/cards]))}))
-
-; (defn back-next []
+; (defn back-next-model
+;   [{:keys [can-increment-fn next-item-fn total]}]
+;   (let [current (r/atom 0)
+;         can-inc-by?
+;             #(let [new-n (+ % current)
+;                   over (> new-n total)
+;                   under (> 0 new-n)]
+;                   (not (or over under (not (can-increment-fn)))))
+;         increment (do
+;                     (next-item-fn)
+;                     (reset! current (+ % @current)))]
+;           (prn current)
+;       {:can-inc-by? can-inc-by? :increment increment}))
+;
+; (defn back-next-buttons [model-options]
+;   (let [{:keys [can-inc-by? increment]} (back-next-model model-options)]
 ;   [:div.session-nav-container
 ;     [:button.back-next-btn
-;     {:disabled @(rf/subscribe [:session/cant-inc -1])
-;      :on-click #(rf/dispatch [:session/inc-card -1])}
+;     {:disabled (can-inc-by? -1)
+;      :on-click #(increment -1)}
 ;       "Back"]
 ;     [:button.back-next-btn
-;      {:disabled
-;         (or (nil? @(rf/subscribe [:session/answer])) @(rf/subscribe [:session/cant-inc 1]))
-;       :on-click #(rf/dispatch [:session/inc-card 1])} "Next"]])
+;      {:disabled (not (can-inc-by? 1))
+;       :on-click #(increment 1)}
+;       "Next"]]))
+;
+; (defn back-next []
+;   (back-next-buttons
+;     {:can-increment-fn #(nil? @(rf/subscribe [:session/answer]))
+;      :next-item-fn #(rf/dispatch [:session/inc-card -1])
+;      :total #(count @(rf/subscribe [:session/cards]))}))
+
+(defn back-next []
+  [:div.session-nav-container
+    [:button.back-next-btn
+    {:disabled @(rf/subscribe [:session/cant-inc -1])
+     :on-click #(rf/dispatch [:session/inc-card -1])}
+      "Back"]
+    [:button.back-next-btn
+     {:disabled
+        (or (nil? @(rf/subscribe [:session/answer])) @(rf/subscribe [:session/cant-inc 1]))
+      :on-click #(rf/dispatch [:session/inc-card 1])} "Next"]])
 
 (defn set-answer-btn [set-correct?]
   (let [answer @(rf/subscribe [:session/answer])
