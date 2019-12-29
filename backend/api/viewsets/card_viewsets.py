@@ -2,7 +2,7 @@ from rest_framework import permissions
 from rest_framework.decorators import action
 from rest_framework.viewsets import ModelViewSet
 from card.models import CardAnswer, Group, Card, List, Session
-from card.serializers import CardSerializer, CardAnswerSerializer, GroupSerializer, ListSerializer, SessionSerializer
+from card.serializers import CardSerializer, CardAnswerSerializer, GroupSerializer, ListSerializer, SessionSerializer, SessionSerializerTestAll
 from rest_framework.response import Response
 from  django.utils import timezone
 from datetime import datetime, timedelta
@@ -137,3 +137,10 @@ class SessionViewSet(ModelViewSet):
                 return Response(serializer.error, 200)
         else:
             return Response(self.serializer_class(last).data, 200)
+
+    @action(detail=True, methods=['GET'])
+    def testall(self, request, pk):
+        serializer_class = SessionSerializerTestAll
+        session = Session.objects.get(pk=pk)
+        serializer = SessionSerializerTestAll(session)
+        return Response(serializer.data, 200)

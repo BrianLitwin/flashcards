@@ -34,6 +34,8 @@
 
   :edit-list/groups #{}
   :edit-list/list nil
+
+  :testall/session nil 
   })
 
 (doall

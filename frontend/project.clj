@@ -29,10 +29,6 @@
                 ;; into your build
                 :figwheel {
                             ; :on-jsload "frontend.core/mount-root"
-                           ;; :open-urls will pop open your application
-                           ;; in the default browser once Figwheel has
-                           ;; started and compiled your application.
-                           ;; Comment this out once it no longer serves you.
                            :open-urls ["http://localhost:3449/index.html"]}
 
                 :compiler {:main frontend.core
@@ -56,7 +52,7 @@
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
 
              ;; :server-ip "127.0.0.1"
-
+             ;;:server-port 3499
              :css-dirs ["resources/public/css"] ;; watch and update CSS
 
              ;; Start an nREPL server into the running figwheel process
