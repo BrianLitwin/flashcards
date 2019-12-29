@@ -13,7 +13,7 @@
   (fn [[cards i] [_ n]]
     (let [new-n (+ i n)
           under (> 0 new-n)
-          ; over (>= new-n (count cards)) show a finish screen when over
+          over (>= new-n (count cards)) ;;  show a finish screen when over
           ]
         under)))
 
