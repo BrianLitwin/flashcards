@@ -5,6 +5,7 @@ from card.models import CardAnswer, Group, Card, List, Session
 from card.serializers import CardSerializer, CardAnswerSerializer, GroupSerializer, ListSerializer, SessionSerializer
 from rest_framework.response import Response
 from  django.utils import timezone
+from datetime import datetime, timedelta
 
 class CardViewSet(ModelViewSet):
     authentication_classes = [] # let any requests in for deving
@@ -121,3 +122,18 @@ class SessionViewSet(ModelViewSet):
     permission_classes = (permissions.AllowAny,)
     queryset = Session.objects.all()
     serializer_class = SessionSerializer
+
+    @action(detail=False, methods=['GET'])
+    def testall(self, request):
+        last = Session.objects.filter(test_all=True).order_by('date').last()
+        week_ago = timezone.now() - timedelta(days=7)
+
+        if last is None or last.date <= week_ago:
+            session = Session.objects.create(test_all=True)
+            serializer = self.serializer_class(session, data={'test_all': True})
+            if serializer.is_valid():
+                return Response(serializer.data, 200)
+            else:
+                return Response(serializer.error, 200)
+        else:
+            return Response(self.serializer_class(last).data, 200)

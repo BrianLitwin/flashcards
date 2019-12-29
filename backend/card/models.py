@@ -4,7 +4,8 @@ from django.utils import timezone
 
 class Session(models.Model):
     date = models.DateTimeField(auto_now_add=True)
-    list = models.ForeignKey('card.List', on_delete=models.CASCADE)
+    list = models.ForeignKey('card.List', on_delete=models.CASCADE, null=True)
+    test_all = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.answers.count()}'

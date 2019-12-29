@@ -1,5 +1,5 @@
 from factory.django import DjangoModelFactory
-from card.models import Card, List, Group
+from card.models import Card, List, Group, Session
 
 class CardFactory(DjangoModelFactory):
     class Meta:
@@ -17,3 +17,7 @@ class GroupFactory(DjangoModelFactory):
 class ListFactory(DjangoModelFactory):
     class Meta:
         model = List
+
+class SessionFactory(DjangoModelFactory):
+    class Meta:
+        model = Session

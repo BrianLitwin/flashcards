@@ -37,9 +37,21 @@
     [sidebar-item "edit list" "edit-list"]
     [sidebar-item "lists" "list"]
     [sidebar-item "session" "session"]
-    [sidebar-item "stats" "stats"]])
+    [sidebar-item "stats" "stats"]
+    [sidebar-item "test all" "testall"]])
 
-(defn home [] [:div "home"])
+
+(defn menu []
+  (let [show (r/atom true)]
+    [:div
+      [:input]
+      [:div {:style {:background "lightYellow"}}
+        (for [x (range 10)]
+          [:div{ :mouseOver #(prn "1")  :style {:height "30px"}} x])
+      ]]))
+
+(defn home [] [menu])
+(defn testall [] [:div])
 
 (def views
   { :session session
@@ -48,7 +60,8 @@
     :list lists-page
     :new-list make-list-view
     :edit-list edit-list
-    :stats session-stats})
+    :stats session-stats
+    :testall testall})
 
 (defn app []
   (let [page @(rf/subscribe [:page])]

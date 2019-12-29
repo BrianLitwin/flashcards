@@ -56589,3 +56589,862 @@ notifying browser that file changed:  resources/public/js/compiled/out/frontend/
 Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
 [32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.621 seconds.[0m
 notifying browser that file changed:  resources/public/js/compiled/out/frontend/edit_list/dispatchers.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 1.366 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.742 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.744 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.674 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.401 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:43  column:1  ----[0m
+
+  [1mWrong number of args (0) passed to: cljs.core/defn--4774[0m
+
+  [33m43[0m  [1m(defn )[0m
+  [0m  [0m  [33m^--- Wrong number of args (0) passed to: cljs.core/defn--4774[0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.4 seconds.[0m
+[36m----  Could not Compile  src/frontend/core.cljs  ----[0m
+
+  [1mfailed compiling file:src/frontend/core.cljs[0m
+
+[36m----  Compiler Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.638 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.783 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.396 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:44  column:3  ----[0m
+
+  [1mWrong number of args (0) passed to: cljs.core/let[0m
+
+  [36m43[0m  [36m(defn menu [][0m
+  [33m44[0m  [1m  (let )[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (0) passed to: cljs.core/let[0m
+  [36m45[0m  [36m)[0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.401 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:44  column:3  ----[0m
+
+  [1mWrong number of args (0) passed to: cljs.core/let[0m
+
+  [36m43[0m  [36m(defn menu [][0m
+  [33m44[0m  [1m  (let )[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (0) passed to: cljs.core/let[0m
+  [36m45[0m  [36m)[0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/core.cljs   line:44  column:14  ----[0m
+
+  [1mWrong number of args (0) passed to reagent.core/atom[0m
+
+  [36m40[0m  [36m    [sidebar-item "stats" "stats"]])[0m
+  [36m41[0m  [36m[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m(defn menu [][0m
+  [33m44[0m  [1m  (let [show (r/atom)])[0m
+  [0m  [0m  [33m             ^--- Wrong number of args (0) passed to reagent.core/atom[0m
+  [36m45[0m  [36m)[0m
+  [36m46[0m  [36m[0m
+  [36m47[0m  [36m[0m
+  [36m48[0m  [36m[0m
+  [36m49[0m  [36m(defn home [] [:div "home"])[0m
+
+[36m----  Compiler Warning : Please see src/frontend/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.714 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/core.cljs   line:44  column:14  ----[0m
+
+  [1mWrong number of args (0) passed to reagent.core/atom[0m
+
+  [36m40[0m  [36m    [sidebar-item "stats" "stats"]])[0m
+  [36m41[0m  [36m[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m(defn menu [][0m
+  [33m44[0m  [1m  (let [show (r/atom )])[0m
+  [0m  [0m  [33m             ^--- Wrong number of args (0) passed to reagent.core/atom[0m
+  [36m45[0m  [36m)[0m
+  [36m46[0m  [36m[0m
+  [36m47[0m  [36m[0m
+  [36m48[0m  [36m[0m
+  [36m49[0m  [36m(defn home [] [:div "home"])[0m
+
+[36m----  Compiler Warning : Please see src/frontend/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.731 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.672 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.651 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.63 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.353 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:45 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 45, col 7] Invalid keyword: :.[0m
+
+  [36m43[0m  [36m(defn menu [][0m
+  [36m44[0m  [36m  (let [show (r/atom false)][0m
+  [33m45[0m  [1m    [:][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 45, col 7] Invalid keyword: :.[0m
+  [36m46[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.625 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.738 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.385 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:45 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 45, col 26] The map literal starting with :on-change on line 45 column 13 contains 1 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m43[0m  [36m(defn menu [][0m
+  [36m44[0m  [36m  (let [show (r/atom false)][0m
+  [33m45[0m  [1m    [:input {:on-change }][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 45, col 26] The map literal starting with :on-change on line 45 column 13 contains 1 form(s). Map literals must contain an even number of forms.[0m
+  [36m46[0m  [36m  ))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.624 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/core.cljs   line:45  column:27  ----[0m
+
+  [1mUse of undeclared Var frontend.core/reset[0m
+
+  [36m43[0m  [36m(defn menu [][0m
+  [36m44[0m  [36m  (let [show (r/atom false)][0m
+  [33m45[0m  [1m    [:input {:on-change #(reset)}][0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var frontend.core/reset[0m
+  [36m46[0m  [36m  ))[0m
+  [36m47[0m  [36m[0m
+  [36m48[0m  [36m[0m
+  [36m49[0m  [36m[0m
+  [36m50[0m  [36m(defn home [] [:div "home"])[0m
+
+[36m----  Compiler Warning : Please see src/frontend/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.742 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/core.cljs   line:45  column:27  ----[0m
+
+  [1mUse of undeclared Var frontend.core/reset[0m
+
+  [36m43[0m  [36m(defn menu [][0m
+  [36m44[0m  [36m  (let [show (r/atom true)][0m
+  [33m45[0m  [1m    [:input {:on-change #(reset)}][0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var frontend.core/reset[0m
+  [36m46[0m  [36m  ))[0m
+  [36m47[0m  [36m[0m
+  [36m48[0m  [36m[0m
+  [36m49[0m  [36m[0m
+  [36m50[0m  [36m(defn home [] [:div "home"])[0m
+
+[36m----  Compiler Warning : Please see src/frontend/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.67 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/core.cljs   line:45  column:27  ----[0m
+
+  [1mUse of undeclared Var frontend.core/reset[0m
+
+  [36m43[0m  [36m(defn menu [][0m
+  [36m44[0m  [36m  (let [show (r/atom true)][0m
+  [33m45[0m  [1m    [:input {:on-change #(reset)}][0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var frontend.core/reset[0m
+  [36m46[0m  [36m  ))[0m
+  [36m47[0m  [36m[0m
+  [36m48[0m  [36m[0m
+  [36m49[0m  [36m[0m
+  [36m50[0m  [36m(defn home [] [:div "home"])[0m
+
+[36m----  Compiler Warning : Please see src/frontend/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.662 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/core.cljs   line:45  column:27  ----[0m
+
+  [1mUse of undeclared Var frontend.core/reset[0m
+
+  [36m43[0m  [36m(defn menu [][0m
+  [36m44[0m  [36m  (let [show (r/atom true)][0m
+  [33m45[0m  [1m    [:input {:on-change #(reset)}[0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var frontend.core/reset[0m
+  [36m46[0m  [36m      [0m
+  [36m47[0m  [36m    ][0m
+  [36m48[0m  [36m  ))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/core.cljs  ----[0m
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.705 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.633 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.72 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.595 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.639 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.688 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.807 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.463 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 4] Unmatched delimiter ).[0m
+
+  [36m45[0m  [36m[:div [0m
+  [36m46[0m  [36m  [:input][0m
+  [33m47[0m  [1m))[0m
+  [0m  [0m  [33m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 4] Unmatched delimiter ).[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.636 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.699 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.669 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.733 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.688 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.713 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.647 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.672 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.621 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.659 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.361 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:46 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 46, col 17] Unmatched delimiter ].[0m
+
+  [36m44[0m  [36m(let [show (r/atom true)][0m
+  [36m45[0m  [36m  [:div[0m
+  [33m46[0m  [1m    [:input]]][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 46, col 17] Unmatched delimiter ].[0m
+  [36m47[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.684 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.651 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.376 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 24] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m  [:div[0m
+  [36m46[0m  [36m    [:input][0m
+  [33m47[0m  [1m    [:div {:style {}][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 24] Unmatched delimiter ].[0m
+  [36m48[0m  [36m    ][0m
+  [36m49[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.348 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 45] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m  [:div[0m
+  [36m46[0m  [36m    [:input][0m
+  [33m47[0m  [1m    [:div {:style {:position "absolute" }][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 45] Unmatched delimiter ].[0m
+  [36m48[0m  [36m    ][0m
+  [36m49[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.356 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 60] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m  [:div[0m
+  [36m46[0m  [36m    [:input][0m
+  [33m47[0m  [1m    [:div {:style {:position "absolute" :height "200px"}][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 60] Unmatched delimiter ].[0m
+  [36m48[0m  [36m    ][0m
+  [36m49[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.348 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m  [:div[0m
+  [36m46[0m  [36m    [:input][0m
+  [33m47[0m  [1m    [:div {:style {:position "absolute" :height "200px" :background "red"}][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+  [36m48[0m  [36m    ][0m
+  [36m49[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.356 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m  [:div[0m
+  [36m46[0m  [36m    [:input][0m
+  [33m47[0m  [1m    [:div {:style {:position "absolute" :height "200px" :background "red"}]][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+  [36m48[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.35 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m  [:div[0m
+  [36m46[0m  [36m    [:input][0m
+  [33m47[0m  [1m    [:div {:style {:position "absolute" :height "200px" :background "red"}]][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+  [36m48[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.365 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m  [:div[0m
+  [36m46[0m  [36m    [:input][0m
+  [33m47[0m  [1m    [:div {:style {:position "absolute" :height "200px" :background "red"}]][0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+  [36m48[0m  [36m))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.353 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m[:div[0m
+  [36m46[0m  [36m  [:input][0m
+  [33m47[0m  [1m  [:div {:style {:position "absolute" :height "200px" :background "red"}]]))[0m
+  [0m  [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.367 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m[:div[0m
+  [36m46[0m  [36m  [:input][0m
+  [33m47[0m  [1m  [:div {:style {:position "absolute" :height "200px" :background "red"}]]))[0m
+  [0m  [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.357 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m[:div[0m
+  [36m46[0m  [36m  [:input][0m
+  [33m47[0m  [1m  [:div {:style {:position "absolute" :height "200px" :background "red"}]]))[0m
+  [0m  [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.351 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:47 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+  [36m45[0m  [36m[:div[0m
+  [36m46[0m  [36m  [:input][0m
+  [33m47[0m  [1m  [:div {:style {:position "absolute" :height "200px" :background "red"}]]))[0m
+  [0m  [0m  [33m  /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 47, col 78] Unmatched delimiter ].[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.731 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.66 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.746 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.762 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.635 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.68 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.346 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:48  column:9  ----[0m
+
+  [1mWrong number of args (1) passed to: cljs.core/for[0m
+
+  [36m46[0m  [36m[:input][0m
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [33m48[0m  [1m  (for [])[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (1) passed to: cljs.core/for[0m
+  [36m49[0m  [36m]]))[0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.364 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:48  column:9  ----[0m
+
+  [1mWrong number of args (1) passed to: cljs.core/for[0m
+
+  [36m46[0m  [36m[:input][0m
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [33m48[0m  [1m  (for [x ])[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (1) passed to: cljs.core/for[0m
+  [36m49[0m  [36m]]))[0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.37 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:48  column:9  ----[0m
+
+  [1mWrong number of args (1) passed to: cljs.core/for[0m
+
+  [36m46[0m  [36m[:input][0m
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [33m48[0m  [1m  (for [x (range)])[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (1) passed to: cljs.core/for[0m
+  [36m49[0m  [36m]]))[0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.361 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:48  column:9  ----[0m
+
+  [1mWrong number of args (1) passed to: cljs.core/for[0m
+
+  [36m46[0m  [36m[:input][0m
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [33m48[0m  [1m  (for [x (range 5)])[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (1) passed to: cljs.core/for[0m
+  [36m49[0m  [36m]]))[0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.356 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:48  column:9  ----[0m
+
+  [1mWrong number of args (1) passed to: cljs.core/for[0m
+
+  [36m46[0m  [36m[:input][0m
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [33m48[0m  [1m  (for [x (range 5)] )[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (1) passed to: cljs.core/for[0m
+  [36m49[0m  [36m]]))[0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.362 seconds.[0m
+[36m----  Could not Analyze  src/frontend/core.cljs   line:48  column:9  ----[0m
+
+  [1mWrong number of args (1) passed to: cljs.core/for[0m
+
+  [36m46[0m  [36m[:input][0m
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [33m48[0m  [1m  (for [x (range 5)] )[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (1) passed to: cljs.core/for[0m
+  [36m49[0m  [36m]]))[0m
+
+[36m----  Analysis Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.735 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.711 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.68 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.724 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.39 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:49 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 49, col 27] Invalid keyword: :.[0m
+
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [36m48[0m  [36m  (for [x (range 5)][0m
+  [33m49[0m  [1m    [:div {:style {:}} x])[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 49, col 27] Invalid keyword: :.[0m
+  [36m50[0m  [36m]]))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.362 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:49 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 49, col 35] The map literal starting with :height on line 49 column 25 contains 1 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [36m48[0m  [36m  (for [x (range 5)][0m
+  [33m49[0m  [1m    [:div {:style {:height }} x])[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 49, col 35] The map literal starting with :height on line 49 column 25 contains 1 form(s). Map literals must contain an even number of forms.[0m
+  [36m50[0m  [36m]]))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.638 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.736 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.361 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:49 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 49, col 52] The map literal starting with :height on line 49 column 25 contains 3 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [36m48[0m  [36m  (for [x (range 10)][0m
+  [33m49[0m  [1m    [:div {:style {:height "30px" :mouseOver}} x])[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 49, col 52] The map literal starting with :height on line 49 column 25 contains 3 form(s). Map literals must contain an even number of forms.[0m
+  [36m50[0m  [36m]]))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.715 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.658 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.363 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:49 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 49, col 18] Invalid keyword: :.[0m
+
+  [36m47[0m  [36m[:div {:style {:background "lightYellow"}}[0m
+  [36m48[0m  [36m  (for [x (range 10)][0m
+  [33m49[0m  [1m    [:div :{:style {:height "30px"}} x])[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 49, col 18] Invalid keyword: :.[0m
+  [36m50[0m  [36m]]))[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.642 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.707 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.648 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.783 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.784 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.615 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.719 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.667 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.376 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:63 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 63, col 15] The map literal starting with :session on line 56 column 3 contains 15 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m61[0m  [36m    :edit-list edit-list[0m
+  [36m62[0m  [36m    :stats session-stats[0m
+  [33m63[0m  [1m    :testall })[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 63, col 15] The map literal starting with :session on line 56 column 3 contains 15 form(s). Map literals must contain an even number of forms.[0m
+  [36m64[0m  [36m[0m
+  [36m65[0m  [36m(defn app [][0m
+  [36m66[0m  [36m  (let [page @(rf/subscribe [:page])][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.412 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:64 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 64, col 15] The map literal starting with :session on line 57 column 3 contains 15 form(s). Map literals must contain an even number of forms.[0m
+
+  [36m62[0m  [36m    :edit-list edit-list[0m
+  [36m63[0m  [36m    :stats session-stats[0m
+  [33m64[0m  [1m    :testall })[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 64, col 15] The map literal starting with :session on line 57 column 3 contains 15 form(s). Map literals must contain an even number of forms.[0m
+  [36m65[0m  [36m[0m
+  [36m66[0m  [36m(defn app [][0m
+  [36m67[0m  [36m  (let [page @(rf/subscribe [:page])][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.7 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.393 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:41 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ).[0m
+
+  [36m39[0m  [36m    [sidebar-item "session" "session"][0m
+  [36m40[0m  [36m    [sidebar-item "stats" "stats"][0m
+  [33m41[0m  [1m    [sidebar-item "test all" "testall"])[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ).[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m[0m
+  [36m44[0m  [36m(defn menu [][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.606 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.652 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.726 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.64 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.426 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:41 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ].[0m
+
+  [36m39[0m  [36m    [sidebar-item "session" "session"][0m
+  [36m40[0m  [36m    [sidebar-item "stats" "stats"]])[0m
+  [33m41[0m  [1m    [sidebar-item "test all" "testall"]])[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ].[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m[0m
+  [36m44[0m  [36m(defn menu [][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.81 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.338 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:41 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ].[0m
+
+  [36m39[0m  [36m    [sidebar-item "session" "session"][0m
+  [36m40[0m  [36m    [sidebar-item "stats" "stats"]])[0m
+  [33m41[0m  [1m    [sidebar-item "test all" "testall"]])[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ].[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m[0m
+  [36m44[0m  [36m(defn menu [][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.724 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.342 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:41 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ].[0m
+
+  [36m39[0m  [36m    [sidebar-item "session" "session"][0m
+  [36m40[0m  [36m    [sidebar-item "stats" "stats"]])[0m
+  [33m41[0m  [1m    [sidebar-item "test all" "testall"]])[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ].[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m[0m
+  [36m44[0m  [36m(defn menu [][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.861 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.628 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/router.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.736 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/router.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.325 seconds.[0m
+[36m----  Could not Read  src/frontend/router.cljs   line:20 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/router.cljs [line 20, col 19] Invalid keyword: :.[0m
+
+  [36m18[0m  [36m     ["/stats" :stats][0m
+  [36m19[0m  [36m     ["/edit-list" :edit-list][0m
+  [33m20[0m  [1m     ["/testall" :][0m
+  [0m  [0m  [33m     /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/router.cljs [line 20, col 19] Invalid keyword: :.[0m
+  [36m21[0m  [36m     ["*" :not-found]]))[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m(bide/start! router {:default :home[0m
+
+[36m----  Reader Error : Please see src/frontend/router.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.752 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/router.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.366 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:80 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 80, col 1] Unexpected EOF while reading item 15 of vector, starting at line 33 and column 3.[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.411 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:80 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 80, col 1] Unexpected EOF while reading item 11 of list, starting at line 32 and column 1.[0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[31mFailed to compile build :dev from ["src"] in 0.376 seconds.[0m
+[36m----  Could not Read  src/frontend/core.cljs   line:41 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ].[0m
+
+  [36m39[0m  [36m    [sidebar-item "session" "session"][0m
+  [36m40[0m  [36m    [sidebar-item "stats" "stats"]][0m
+  [33m41[0m  [1m    [sidebar-item "test all" "testall"]])[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/core.cljs [line 41, col 41] Unmatched delimiter ].[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m[0m
+  [36m44[0m  [36m(defn menu [][0m
+
+[36m----  Reader Error : Please see src/frontend/core.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.71 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.743 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.735 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/core.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[36m----  Compiler Warning on   src/frontend/cards.cljs   line:84  column:32  ----[0m
+
+  [1mUse of undeclared Var frontend.cards/group-id[0m
+
+  [36m80[0m  [36m :success-fetch-groups[0m
+  [36m81[0m  [36m (fn [{:keys [db]} [_ response]][0m
+  [36m82[0m  [36m   (let [group-id (-> response first :id)][0m
+  [36m83[0m  [36m   {:db (assoc db :groups response )})))[0m
+  [33m84[0m  [1m    :dispatch [:cards-in-group group-id]}))) ;; fetch these so that in 'groups', it's initialized w/ some cards[0m
+  [0m  [0m  [33m                               ^--- Use of undeclared Var frontend.cards/group-id[0m
+  [36m85[0m  [36m[0m
+  [36m86[0m  [36m(rf/reg-event-db[0m
+  [36m87[0m  [36m :success-new-group[0m
+  [36m88[0m  [36m (fn [db [_ response]][0m
+  [36m89[0m  [36m   (assoc db :groups (conj (:groups db) response))))[0m
+
+[36m----  Compiler Warning : Please see src/frontend/cards.cljs  ----[0m
+[31mFailed to compile build :dev from ["src"] in 0.362 seconds.[0m
+[36m----  Could not Read  src/frontend/cards.cljs   line:84 ----[0m
+
+  [1m/Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/cards.cljs [line 84, col 42] Unmatched delimiter }.[0m
+
+  [36m82[0m  [36m   (let [group-id (-> response first :id)][0m
+  [36m83[0m  [36m   {:db (assoc db :groups response )})))[0m
+  [33m84[0m  [1m    :dispatch [:cards-in-group group-id]}))) ;; fetch these so that in 'groups', it's initialized w/ some cards[0m
+  [0m  [0m  [33m    /Users/brianlitwin/Desktop/projects/flashcards/frontend/src/frontend/cards.cljs [line 84, col 42] Unmatched delimiter }.[0m
+  [36m85[0m  [36m[0m
+  [36m86[0m  [36m(rf/reg-event-db[0m
+  [36m87[0m  [36m :success-new-group[0m
+
+[36m----  Reader Error : Please see src/frontend/cards.cljs  ----[0m
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.725 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/cards.js
+Compiling build :dev to "resources/public/js/compiled/frontend.js" from ["src"]...
+[32mSuccessfully compiled build :dev to "resources/public/js/compiled/frontend.js" in 0.805 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/frontend/cards.js

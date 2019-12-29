@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, SerializerMethodField
 from .models import Group, CardAnswer, List, Card, Session
 
 class GroupSerializer(ModelSerializer):
@@ -26,8 +26,15 @@ class ListSerializer(ModelSerializer):
 
 class SessionSerializer(ModelSerializer):
     answers = CardAnswerSerializer(read_only=True, many=True)
-    # list = ListSerializer(read_only=True)
+    all_answer_ids = SerializerMethodField()
 
     class Meta:
         model = Session
         fields = '__all__'
+
+    def get_all_answer_ids(self, session):
+        if session.test_all:
+            prev_answers = session.answers.values('id')
+            return [x.id for x in CardAnswer.objects.exclude(id__in=prev_answers)]
+            
+        return None
