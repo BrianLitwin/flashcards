@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: bash -c "cd backend && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8001"
+    container_name: flashcard
+    volumes:
+      - .:/temp
+    ports:
+      - "8001:8001"
