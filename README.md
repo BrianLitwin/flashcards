@@ -1,6 +1,6 @@
 # flashcards
 
 ```
-docker-compose -up
+docker-compose up // from top-level directory 
 lein figwheel 
 ```
